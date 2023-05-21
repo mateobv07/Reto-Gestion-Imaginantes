@@ -7,7 +7,7 @@ export const createSolicitud = async (req, res) => {
     res.status(201);
 }
 
-export const updateSolciitud = async (req, res) => {
+export const updateSolcitud = async (req, res) => {
     res.status(200);
 }
 

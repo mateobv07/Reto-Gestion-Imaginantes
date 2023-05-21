@@ -1,3 +1,7 @@
+export const login = async (req, res) => {
+    res.status(200);
+}
+
 export const getUser = async (req, res) => {
     res.status(200);
 }

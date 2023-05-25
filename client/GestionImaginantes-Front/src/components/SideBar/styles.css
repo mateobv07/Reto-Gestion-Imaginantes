@@ -1,0 +1,22 @@
+.box {
+  position: fixed;
+  color: yellow;
+  height: 95vh;
+  width: 189px;
+  background-color: #8ACBD6;
+  margin-top: 10px;
+  left: 30px;
+}
+
+.texto-nav {
+  font-size: 18px !important;
+}
+
+.icon path {
+  stroke: #FFFFFF;
+}
+
+.logo {
+  height: 45px;
+  width: 45px;
+}

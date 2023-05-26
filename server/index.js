@@ -5,10 +5,10 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from './swagger.json' assert { type: "json" };
 
 //declaring routes
-import asignacionRoutes from './routes/asignacion.js';
-import comenatrioRoutes from './routes/comentario.js';
-import solcitudRoutes from './routes/solicitud.js';
-import usuarioRoutes from './routes/usuario.js';
+import assignmentRoutes from './routes/assignment.js';
+import commentRoutes from './routes/comment.js';
+import requestRoutes from './routes/request.js';
+import userRoutes from './routes/user.js';
 
 const app = express();
 
@@ -20,10 +20,10 @@ app.use(cors());
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //routes
-app.use('/asignacion', asignacionRoutes);
-app.use('/comentario', comenatrioRoutes);
-app.use('/solicitud', solcitudRoutes);
-app.use('/usario', usuarioRoutes);
+app.use('/assignment', assignmentRoutes);
+app.use('/comment', commentRoutes);
+app.use('/solicitud', requestRoutes);
+app.use('/usario', userRoutes);
 
 
 

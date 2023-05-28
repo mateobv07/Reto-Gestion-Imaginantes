@@ -1,5 +1,30 @@
 .mainContainer {
-    margin-left: 250px;
+    margin-left: 230px;
     margin-right: 5vw;
     margin-top: 32px;
+}
+
+.title-row {
+    margin-left: 18px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #4B5055;
+}
+
+.round-paper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A3AFBA !important;
+    height: 42px;
+    width: 42px;
+    border-radius: 50% !important;
 }

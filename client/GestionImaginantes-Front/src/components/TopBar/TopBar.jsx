@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from "react";
 import { AppBar, Toolbar, Typography, Box, LinearProgress } from "@mui/material";
 import './styles.css'
 
@@ -13,7 +13,7 @@ const TopBar = ({progress, name, level}) => {
             </Typography>
             <LinearProgress className='progress-bar' variant='determinate' value={progress}/>
           </div>
-          <Typography className='progreso-text'>
+          <Typography className='fecha-text'>
             Viernes, 28 de abril 2023
           </Typography>
           <Box className="profile-container">

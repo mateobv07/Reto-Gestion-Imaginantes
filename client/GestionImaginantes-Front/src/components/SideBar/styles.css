@@ -1,8 +1,9 @@
 .box {
-  position: fixed;
+  position: absolute;
   color: yellow;
-  height: 92vh;
-  width: 189px;
+  min-height: 700px;
+  height: 93.5vh;
+  width: 172px;
   background-color: #8ACBD6;
   left: 32px;
   border-radius: 4px;

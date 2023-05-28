@@ -1,0 +1,15 @@
+.task-card-container {
+    border-radius: 4px;
+    background-color: #FFFFFF !important;
+    min-height: 300px !important;
+    height: 42.5vh;
+}
+
+.task-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #EFF2F6;
+    min-height: 100;
+}

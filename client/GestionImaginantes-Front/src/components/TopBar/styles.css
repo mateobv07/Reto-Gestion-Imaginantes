@@ -1,11 +1,16 @@
 .rounding{
     border-radius: 4px;
-    height: 84px;
+    height: 82px;
     display: flex;
     justify-content: center;
 }
 
 .progreso-text{
+    color: #4B5055;
+    font-size: 18px;
+    font-weight: 600 !important;
+}
+.fecha-text{
     color: #4B5055;
     font-size: 18px;
 }

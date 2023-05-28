@@ -16,10 +16,12 @@ const UpcomingTask = ({task}) => {
 
         { task ?
           <div className='task-container'>
-            <p>{task.name}</p>
-            <p>Fecha Límite: {task.date}</p>
+            <div>
+              <p className="upcoming-task-title">{task.name}</p>
+              <p className="task-date-text">Fecha Límite: {task.date}</p>
+            </div>
             <div className='task-description-container'>
-              {task.description}
+              <p className="upcoming-task-description">{task.description}</p>
             </div>
           </div>
           :

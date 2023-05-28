@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Paper, Button } from "@mui/material";
 import { TfiAnnouncement } from 'react-icons/tfi'
-
 import './styles.css'
 
 

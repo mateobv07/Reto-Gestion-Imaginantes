@@ -1,14 +1,15 @@
 .rounding{
-    border-radius: 4px;
+    border-radius: 5px;
     height: 82px;
     display: flex;
     justify-content: center;
 }
 
 .progreso-text{
+    font-family: Futura!important;
     color: #4B5055;
     font-size: 18px;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
 }
 .fecha-text{
     color: #4B5055;
@@ -21,19 +22,25 @@
 }
 
 .progress-bar{
+    margin-top: 5px;
     margin-left: 15px;
-    background-color: #d7d7d7 !important;
+    background-color: #ffffff !important;
+    box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.25) !important;
     height: 16px !important;
     border-radius: 10px !important;
     width: 22vw;
 }
 
-.progress-bar > * { background-color:#5EB2C2 !important; }
+.progress-bar > * {
+    box-shadow: inset 0px 4px 20px rgba(0, 0, 0, 0.25) !important;
+    background-color:#5EB2C2 !important; 
+    border-radius: 32px;
+}
 
 .profile-container{
     height: 84px;
     background-color: #8ACBD6;
-    width: 200px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;

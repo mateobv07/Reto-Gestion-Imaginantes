@@ -1,6 +1,6 @@
 .announcement-card-container {
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #FFFFFF !important;
-    min-height: 230px !important;
+    min-height: 240px !important;
     height: 32.5vh;
 }

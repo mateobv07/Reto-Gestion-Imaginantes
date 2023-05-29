@@ -1,15 +1,16 @@
 .box {
   position: absolute;
-  color: yellow;
-  min-height: 685px;
-  height: 93.5vh;
+  color: #30768a;
+  min-height: 700px;
+  height: 83.5vh;
   width: 172px;
-  background-color: #8ACBD6;
+  background-color: #5EB2C2;
   left: 32px;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .texto-nav {
+  font-family: Futura!important;
   font-size: 18px !important;
 }
 

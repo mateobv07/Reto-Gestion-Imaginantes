@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, List, ListItem, ListItemButton, ListItemIcon, Box } from "@mui/material";
 import { AiFillHome, AiFillAppstore } from 'react-icons/ai';
 import { GrCycle } from 'react-icons/gr';
-import { RxTimer } from 'react-icons/rx'
+import { RiDashboard3Line } from 'react-icons/ri'
 import { useNavigate } from 'react-router-dom';
 import './styles.css'
 
@@ -16,8 +16,8 @@ const SideBar = () => {
     }
 
     return (
-        <Box className="box" sx={{ boxShadow: 14 }}>
-             <List sx={{ mt: 20 }}>
+        <Box className="box" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
+             <List sx={{ mt: 18 }}>
                 <ListItem sx={{ my: 3 }}>
                     <ListItemButton onClick={() => navigate('/')} justifycontent="center">
                         <ListItemIcon sx={{ mr: -3 }}>
@@ -48,7 +48,7 @@ const SideBar = () => {
                 <ListItem sx={{ my: 3 }}>
                     <ListItemButton onClick={() => navigate('/progreso')}>
                         <ListItemIcon sx={{ mr: -3 }}>
-                            <RxTimer size={22} color='#FFFFFF'/>
+                            <RiDashboard3Line size={22} color='#FFFFFF'/>
                         </ListItemIcon>
                         <Typography className="texto-nav" color='#FFFFFF'>Progreso</Typography>
                     </ListItemButton>

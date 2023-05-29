@@ -1,13 +1,16 @@
 import React from "react";
 import { Box, Button } from "@mui/material";
 import { BiTask } from 'react-icons/bi'
+import { useNavigate } from "react-router-dom";
 
 import './styles.css'
 
 const UpcomingTask = ({task}) => {
+  const navigate = useNavigate();
+
   return (
     <Box className="task-card-container"  sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-      <div className='title-row'>
+      <div className='title-row pointer' onClick={() => navigate("/tablero")}>
         <p className='card-title'>PROXIMA TAREA</p>
         <Box className='round-paper'>
           <BiTask size={24} color='#FFFFFF' />

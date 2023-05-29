@@ -1,12 +1,15 @@
 import React from "react";
-import { Paper, Typography } from "@mui/material";
-import { TbBellRinging } from 'react-icons/tb';
+import { Paper, Typography, Stack } from "@mui/material";
+import { MdOutlinePendingActions } from 'react-icons/md';
 import './styles.css'
 const Request = ({request}) => {
   return (
     <Paper className="request-container">
         <Typography noWrap className="request-title">{request.title}</Typography>
-        <Typography>{request.status}</Typography>
+        <Stack direction="row"  alignItems="center" sx={{ml:2}}>
+          <MdOutlinePendingActions size={18} color="#18A900"/>
+          <Typography className="request-status">{request.status}</Typography>
+        </Stack>
     </Paper>
   );
 }

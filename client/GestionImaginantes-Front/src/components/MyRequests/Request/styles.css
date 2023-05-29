@@ -6,5 +6,16 @@
 }
 
 .request-title {
-    color: blue;
+    font-size: 16px !important;
+    color: #5EB2C2;
+    margin-top: 6px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.request-status {
+    font-size: 14px !important;
+    color: #18A900;
+    margin-left: 4px !important;
+    margin-right: 10px !important;
 }

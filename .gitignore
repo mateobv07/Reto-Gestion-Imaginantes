@@ -11,5 +11,13 @@ coverage
 # Benchmarking
 benchmarks/graphs
 
+# misc
+.env
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # ignore additional files using core.excludesFile
 # https://git-scm.com/docs/gitignore

@@ -9,7 +9,7 @@ const Inicio = () => {
     const task = {name: "Taller de juegos", date: "20 de Mayo", description: "En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)"}
 
     return (
-        <Grid container spacing={4} sx={{mt:0}}>
+        <Grid container spacing={3} sx={{mt:0}}>
             <Grid item md={7} xs={12}>
                 <UpcomingTask task={task}/>
             </Grid>

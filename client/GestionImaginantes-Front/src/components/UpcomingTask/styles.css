@@ -1,7 +1,7 @@
 .task-card-container {
-    border-radius: 4px;
+    border-radius: 5px;
     background-color: #FFFFFF !important;
-    min-height: 290px !important;
+    min-height: 330px !important;
     height: 42.5vh;
 }
 
@@ -42,6 +42,7 @@
     overflow: auto;
     margin-left: 14px;
     margin-right: 14px;
+    margin-bottom: 35px;
 }
 .upcoming-task-description {
     color: #FFFFFF;

@@ -1,18 +1,17 @@
 import React from "react";
-import { Paper } from "@mui/material";
+import { Box } from "@mui/material";
 import { TbBellRinging } from 'react-icons/tb';
-
 
 const MyRequests = () => {
   return (
-      <Paper elevation={3} className="task-card-container">
-        <div className='title-row'>
-            <p className='card-title'>SOLICITUDES</p>
-            <Paper className='round-paper'>
-                <TbBellRinging size={28} color='#FFFFFF' />
-            </Paper>
-        </div>
-      </Paper>
+    <Box className="task-card-container" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
+      <div className='title-row'>
+        <p className='card-title'>SOLICITUDES</p>
+        <Box className='round-paper' component="div">
+          <TbBellRinging size={24} color='#FFFFFF' />
+        </Box>
+      </div>
+    </Box>
   );
 }
 

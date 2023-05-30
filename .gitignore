@@ -11,5 +11,8 @@ coverage
 # Benchmarking
 benchmarks/graphs
 
+# Editor directories and files
+.DS_Store
+
 # ignore additional files using core.excludesFile
 # https://git-scm.com/docs/gitignore

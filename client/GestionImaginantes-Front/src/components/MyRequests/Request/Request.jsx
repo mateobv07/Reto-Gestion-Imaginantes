@@ -1,16 +1,16 @@
 import React from "react";
-import { Paper, Typography, Stack } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { MdOutlinePendingActions } from 'react-icons/md';
 import './styles.css'
 const Request = ({request}) => {
   return (
-    <Paper className="request-container">
+    <Box className="request-container">
         <Typography noWrap className="request-title">{request.title}</Typography>
-        <Stack direction="row"  alignItems="center" sx={{ml:2}}>
-          <MdOutlinePendingActions size={18} color="#18A900"/>
+        <Stack direction="row" alignItems="center" sx={{ml:2}}>
+          <MdOutlinePendingActions size={15} color="#5EB2C2"/>
           <Typography className="request-status">{request.status}</Typography>
         </Stack>
-    </Paper>
+    </Box>
   );
 }
 

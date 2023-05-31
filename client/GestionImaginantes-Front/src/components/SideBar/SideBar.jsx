@@ -17,9 +17,9 @@ const SideBar = () => {
 
     return (
         <Box className="box" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-             <List sx={{ mt: 18 }}>
-                <ListItem sx={{ my: 3 }}>
-                    <ListItemButton onClick={() => navigate('/')} justifycontent="center">
+             <List sx={{ mt: 22 }}>
+                <ListItem component="div" disablePadding>
+                    <ListItemButton onClick={() => navigate('/')} justifycontent="center" sx={{ padding: '25px' }}>
                         <ListItemIcon sx={{ mr: -3 }}>
                             <AiFillHome size={22} color='#FFFFFF'/>
                         </ListItemIcon>
@@ -27,8 +27,8 @@ const SideBar = () => {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem sx={{ my: 3 }}>
-                    <ListItemButton onClick={() => navigate('/tablero')}>
+                <ListItem component="div" disablePadding>
+                    <ListItemButton onClick={() => navigate('/tablero')} sx={{ padding: '25px' }}>
                         <ListItemIcon sx={{ mr: -3 }}>
                             <AiFillAppstore size={22} color='#FFFFFF'/>
                         </ListItemIcon>
@@ -36,8 +36,8 @@ const SideBar = () => {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem sx={{ my: 3 }}>
-                    <ListItemButton onClick={() => navigate('/solicitudes')}>
+                <ListItem component="div" disablePadding>
+                    <ListItemButton onClick={() => navigate('/solicitudes')} sx={{ padding: '25px' }}>
                         <ListItemIcon sx={{ mr: -3 }}>
                             <GrCycle className="icon" size={22} color='#FFFFFF'/>
                         </ListItemIcon>
@@ -45,8 +45,8 @@ const SideBar = () => {
                     </ListItemButton>
                 </ListItem>
 
-                <ListItem sx={{ my: 3 }}>
-                    <ListItemButton onClick={() => navigate('/progreso')}>
+                <ListItem component="div" disablePadding>
+                    <ListItemButton onClick={() => navigate('/progreso')} sx={{ padding: '25px' }}>
                         <ListItemIcon sx={{ mr: -3 }}>
                             <RiDashboard3Line size={22} color='#FFFFFF'/>
                         </ListItemIcon>

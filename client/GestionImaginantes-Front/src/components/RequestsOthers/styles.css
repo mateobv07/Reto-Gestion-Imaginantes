@@ -1,0 +1,36 @@
+.request-others-container {
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-bottom: 5px;
+    height: auto;
+    overflow-y: auto;
+}
+
+
+.title-row-inside {
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.card-title-request {
+    margin-left: 10px;
+    margin-left: 10px;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #4B5055;
+}
+
+.round-paper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A3AFBA !important;
+    height: 38px;
+    width: 38px;
+    border-radius: 50% !important;
+}

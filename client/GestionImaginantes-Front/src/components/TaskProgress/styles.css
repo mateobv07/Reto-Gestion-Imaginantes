@@ -3,7 +3,7 @@
     background-color: #FFFFFF !important;
     min-height: 290px !important;
     height: 78.5vh;
-    width: 110%;
+    width: 100%;
     margin-top: -8px;
     overflow: auto; 
 }
@@ -18,7 +18,7 @@
     padding: 10px 20px; 
     margin-bottom: 1px;
     text-align: center;
-    border-top: 1px solid #000;
+    border-top: 1px solid #696969;
 }
 
 .taskprogress-title {
@@ -42,5 +42,5 @@
 }
 
 .last-task {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #696969;
 }

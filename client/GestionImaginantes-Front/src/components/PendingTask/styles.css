@@ -1,14 +1,8 @@
 .task-pending-card-container {
     border-radius: 5px;
-    background-color: #FFFFFF !important;
+    margin-top: 24px;
+    background-color: #ffffff !important;
     min-height: 594px !important;
     height: 42.5vh;
+    width: 96.4vh;;
 }
-
-.task-pending-container {
-    display: flex;
-    background-color: #EFF2F6;
-    min-height: 470px;
-    height: 30vh;
-}
-

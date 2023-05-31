@@ -1,0 +1,46 @@
+.taskprogress-card-container {
+    border-radius: 5px;
+    background-color: #FFFFFF !important;
+    min-height: 290px !important;
+    height: 78.5vh;
+    width: 100%;
+    margin-top: -8px;
+    overflow: auto; 
+}
+
+.taskprogress-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: #ffffff;
+    min-height: 50px;
+    padding: 10px 20px; 
+    margin-bottom: 1px;
+    text-align: center;
+    border-top: 1px solid #696969;
+}
+
+.taskprogress-title {
+    text-overflow: ellipsis !important;
+    font-weight: 500;
+    font-size: 22px;
+    color: #4B5055;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.taskprogress-date-text {
+    margin-top: 2px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #909090;
+}
+
+.completed-task {
+    text-decoration: line-through;
+}
+
+.last-task {
+    border-bottom: 1px solid #696969;
+}

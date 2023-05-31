@@ -1,0 +1,12 @@
+.completion-bar-card-container {
+    border-radius: 5px;
+    background-color: #FFFFFF !important;
+    height: 38vh;  
+    min-height: 290px;
+    margin-bottom: 25px;  
+    margin-top: -8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

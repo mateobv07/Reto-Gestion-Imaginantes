@@ -1,0 +1,8 @@
+.level-badge-card-container {
+    border-radius: 5px;
+    background-color: #FFFFFF !important;
+    height: 38vh; 
+    width: 100%;
+    margin-bottom: 10px;  
+    overflow: auto; 
+}

@@ -1,21 +1,21 @@
 .request-container {
-    margin: 14px;
-    border: 4px solid #5EB2C2;
-    border-radius: 18px !important;
+    margin-top: -1px;
+    border: 1px solid #A3AFBA;
     height: 62px;
 }
 
 .request-title {
-    font-size: 16px !important;
-    color: #5EB2C2;
+    font-weight: bold!important;
+    font-size: 15px !important;
+    color: #4B5055;
     margin-top: 6px !important;
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-left: 18px !important;
+    margin-right: 5px !important;
 }
 
 .request-status {
     font-size: 14px !important;
-    color: #18A900;
+    color: #5EB2C2;
     margin-left: 4px !important;
     margin-right: 10px !important;
 }

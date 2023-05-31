@@ -7,7 +7,7 @@ import MyRequests from "../components/MyRequests/MyRequests";
 
 const Inicio = () => {
     const task = {name: "Taller de juegos", date: "20 de Mayo", description: "En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)"}
-    const requests = [{id:1, title:"Taller Juegos Taller Juegos Taller Juegos Taller Juegos Taller Juegos Taller Juegos", status:"En espera de confirmación"}, {id:2, title:"Taller Juegos", status:"En espera de confirmación"}, {id:3, title:"Taller Juegos", status:"En espera de confirmación"}, {id:4, title:"Taller Juegos", status:"En espera de confirmación"}]
+    const requests = [{id:1, title:"Taller Juegos", status:"En espera de confirmación"}, {id:2, title:"Taller Lectura", status:"En espera de confirmación"}, {id:3, title:"Taller Instrumentos", status:"En espera de confirmación"}, {id:4, title:"Taller Juegos", status:"En espera de confirmación"}]
     return (
         <Grid container spacing={3} sx={{mt:0}}>
             <Grid item md={7} xs={12}>

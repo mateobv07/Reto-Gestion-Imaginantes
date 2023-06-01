@@ -3,7 +3,7 @@ import { getAllAssignmentComments, createComment, deleteComment } from "../contr
 
 const router = express.Router();
 
-router.get('/:id', getAllAssignmentComments);
+router.get('/:assignmentID', getAllAssignmentComments);
 router.post('/', createComment);
 router.delete('/:id', deleteComment);
 

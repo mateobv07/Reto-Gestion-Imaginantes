@@ -2,10 +2,14 @@ import React from "react";
 import { useMemo } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
 import { green, grey } from "@mui/material/colors";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import "./styles.css";
 
 const CompletionBar = ({ tasks }) => {
+  const theme = useTheme();
+
   const totalTasks = tasks.length;
   const completedTasks = useMemo(
     () => tasks.filter((task) => task.completed).length,
@@ -31,14 +35,14 @@ const CompletionBar = ({ tasks }) => {
         <CircularProgress
           variant="determinate"
           value={100}
-          size={200}
+          size = {useMediaQuery(theme.breakpoints.up('lg')) ? 50 : 200 }
           thickness={3.5}
           style={{ color: grey[300] }}
         />
         <CircularProgress
           variant="determinate"
           value={completedPercentage}
-          size={200}
+          size = {useMediaQuery(theme.breakpoints.up('lg')) ? 50 : 200 }
           thickness={3.5}
           style={{ color: green["A400"], position: 'absolute' }}
         />

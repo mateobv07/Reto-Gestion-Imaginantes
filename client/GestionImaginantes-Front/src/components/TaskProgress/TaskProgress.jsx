@@ -10,7 +10,7 @@ const TaskProgress = ({ tasks, onTaskCompletion }) => {
   const CustomCheckbox = styled(Checkbox)({
     color: "black",
     "&.Mui-checked": {
-      color: "#8ACBD6",
+      color: "#5EB2C2",
     },
   });
 

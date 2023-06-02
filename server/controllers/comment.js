@@ -16,9 +16,32 @@ export const getAllAssignmentComments = async (req, res) => {
 }
 
 export const createComment= async (req, res) => {
-    res.status(201);
+    const { assignmentID, content } = req.body;
+
+    if(!assignmentID || !content) return res.status(400).json("invalid body");
+
+    db('Comment')
+        .insert(
+        {assignmentID, content}, 
+        ).then(comment => { 
+            res.status(201).json(comment); 
+        }).catch(err => {
+            res.status(400).json('Unable to insert comment', err);
+        });
 }
 
 export const deleteComment = async (req, res) => {
-    res.status(200);
+    const { id } = req.params;
+
+    db('Comment')
+        .where('id', id)
+        .del()
+        .then(comment => { 
+            if (comment) {
+                return res.status(204).json("Deleted successfully"); 
+            }
+            res.status(400).json("Comment ID does not exist"); 
+        }).catch(err => {
+            res.status(400).json('Unable to delete comment', err);
+        });
 }

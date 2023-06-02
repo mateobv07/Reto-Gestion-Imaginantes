@@ -36,5 +36,17 @@ export const updateRequest = async (req, res) => {
 }
 
 export const deleteRequest = async (req, res) => {
-    res.status(200);
+    const { id } = req.params;
+
+    db('Request')
+        .where('id', id)
+        .del()
+        .then(comment => { 
+            if (comment) {
+                return res.status(204).json("Deleted successfully"); 
+            }
+            res.status(400).json("Request ID does not exist"); 
+        }).catch(err => {
+            res.status(400).json('Unable to delete request', err);
+        });
 }

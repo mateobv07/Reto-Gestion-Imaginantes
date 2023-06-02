@@ -26,7 +26,3 @@ export const createUser = async (req, res) => {
 export const updateUser = async (req, res) => {
     res.status(200);
 }
-
-export const deleteUser = async (req, res) => {
-    res.status(200);
-}

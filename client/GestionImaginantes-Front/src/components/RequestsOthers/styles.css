@@ -1,36 +1,79 @@
-.request-others-container {
-    margin-left: 28px;
-    margin-right: 28px;
-    margin-bottom: 5px;
-    height: auto;
-    overflow-y: auto;
+
+.title-row-solicitudes {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
 }
 
-
-.title-row-inside {
-    margin-right: 18px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap
+.solicitudes-container {
+    border-radius: 5px;
+    background-color: #FFFFFF !important;
+    height: 593px !important;
+    overflow: auto; 
 }
 
 .card-title-request {
-    margin-left: 10px;
-    margin-left: 10px;
+    margin-right: auto;
     font-family: Futura !important;
     font-size: 15.5px;
     font-weight: 500;
     color: #4B5055;
 }
+.row-things {
+    font-weight: bold!important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    color: #4B5055;
+}
 
-.round-paper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A3AFBA !important;
-    height: 38px;
-    width: 38px;
-    border-radius: 50% !important;
+
+.toggle-intercambios-solicitudes{
+    margin-top: auto;
+    margin-bottom: 4px;
+    height: 30px;
+}
+
+.linea-gris{
+    margin-top: 10px;
+    margin-bottom: 1px;
+    height: 1px;
+    border: none;
+    background: #bcbec2;
+}
+
+.row-date {
+    font-weight: 500 !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    color: #a0a1a3;
+}
+
+
+.chip-interno {
+    size: medium;
+    font-family: Futura !important;
+    background: #FFFFFF !important;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    border-width: 2px !important;
+}
+.chip-externo {
+    size: medium;
+    font-family: Futura !important;
+    background: #FFFFFF !important;
+    right: 30px;
+    z-index: 3;
+    position: relative;
+    width: 100px;
+    border-width: 2px !important;
 }

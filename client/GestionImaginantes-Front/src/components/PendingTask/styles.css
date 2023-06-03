@@ -1,8 +1,6 @@
 .task-pending-card-container {
     border-radius: 5px;
-    margin-top: 24px;
     background-color: #ffffff !important;
     min-height: 594px !important;
-    height: 42.5vh;
-    width: 96.4vh;;
+    height: 42.5vh;    
 }

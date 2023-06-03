@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Grid } from "@mui/material";
 import PendingTask from "../components/PendingTask/PendingTask";
 import Calendar from "../components/Calendar/Calendar";
 import Overview from "../components/Overview/Overview";
@@ -14,13 +14,15 @@ const Tablero = () => {
     ];
 
     return (
-        <Box display="flex">
-            <PendingTask/>
-            <Box sx={{ flex: 1 }}>
-                <Calendar/>
-                <Overview/>
-            </Box>
-        </Box>
+        <Grid container spacing={3} sx={{ mt: 0 }}>
+        <Grid item md={7} xs={12}>
+          <PendingTask/>
+        </Grid>
+        <Grid item md={5} xs={12}>
+          <Calendar/>
+          <Overview/>
+        </Grid>
+      </Grid>
     );
 }
 

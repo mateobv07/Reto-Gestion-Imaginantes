@@ -1,0 +1,25 @@
+
+.solicitudes-container {
+    border-radius: 5px;
+    background-color: #FFFFFF !important;
+    height: 593px !important;
+    overflow: auto; 
+}
+
+.card-title-request {
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #4B5055;
+}
+
+
+.linea-gris{
+    margin-top: 10px;
+    margin-bottom: 1px;
+    height: 1px;
+    border: none;
+    background: #bcbec2;
+}
+

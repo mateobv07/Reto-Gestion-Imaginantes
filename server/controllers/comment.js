@@ -22,11 +22,11 @@ export const createComment= async (req, res) => {
 
     db('Comment')
         .insert(
-        {assignmentID, content}, 
-        ).then(comment => { 
-            res.status(201).json(comment); 
+        {assignmentID, content},
+        ).then(comment => {
+            res.status(201).json(comment);
         }).catch(err => {
-            res.status(400).json('Unable to insert comment', err);
+            res.status(400).json({ "message": 'Unable to insert comment ', "error":err.sqlMessage });
         });
 }
 
@@ -36,11 +36,11 @@ export const deleteComment = async (req, res) => {
     db('Comment')
         .where('id', id)
         .del()
-        .then(comment => { 
+        .then(comment => {
             if (comment) {
-                return res.status(204).json("Deleted successfully"); 
+                return res.status(204).json("Deleted successfully");
             }
-            res.status(400).json("Comment ID does not exist"); 
+            res.status(400).json("Comment ID does not exist");
         }).catch(err => {
             res.status(400).json('Unable to delete comment', err);
         });

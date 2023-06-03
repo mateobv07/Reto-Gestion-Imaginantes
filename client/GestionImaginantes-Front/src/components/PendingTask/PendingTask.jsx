@@ -8,11 +8,12 @@ const PendingTask = () => {
     return (
         <Box className="task-pending-card-container" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)" }}>
             <div className='title-row'>
-            <p className='card-title'>TAREAS PENDIENTES</p>
-            <Box className="round-paper">
-                <HiOutlineClipboardList size={24} color="#FFFFFF" />
-            </Box>
+                <p className='card-title'>TAREAS PENDIENTES</p>
+                <Box className="round-paper">
+                    <HiOutlineClipboardList size={24} color="#FFFFFF" />
+                </Box>
             </div>
+            <hr className='division'></hr>
         </Box>
     );
 }

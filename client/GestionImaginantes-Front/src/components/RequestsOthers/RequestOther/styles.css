@@ -1,0 +1,44 @@
+.row-things {
+    font-weight: bold!important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    color: #4B5055;
+}
+
+.row-date {
+    font-weight: 500 !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    color: #a0a1a3;
+}
+
+.chip-interno {
+    size: medium;
+    font-family: Futura !important;
+    background: #FFFFFF !important;
+    z-index: 2;
+    position: relative;
+    width: 100px;
+    border-width: 2px !important;
+}
+.chip-externo {
+    size: medium;
+    font-family: Futura !important;
+    background: #FFFFFF !important;
+    right: 30px;
+    z-index: 3;
+    position: relative;
+    width: 100px;
+    border-width: 2px !important;
+}
+
+.solicitudes-intercambios-container {
+    height: 525px;
+    overflow-y: auto;
+}

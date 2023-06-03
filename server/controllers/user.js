@@ -9,21 +9,16 @@ export const getUser = async (req, res) => {
     console.log(studentID)
     db('User')
     .where('studentID',studentID)
+    .first()
     .then(user => {
-        console.log(user);
-        res.status(200).json(user);
-    });
-    //res.status(200);
+        if (user) {
+            return res.status(200).json(user);
+        }
+        res.status(200).json('Invalid student id');
+    })
+    .catch(err => res.status(400).json('Unable to get user', err));
 }
 
 export const createUser = async (req, res) => {
     res.status(201);
-}
-
-export const updateUser = async (req, res) => {
-    res.status(200);
-}
-
-export const deleteUser = async (req, res) => {
-    res.status(200);
 }

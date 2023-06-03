@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from 'cors';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.json' assert { type: "json" };
+//import swaggerDocument from './swagger.json' assert { type: "json" };
 import knex from 'knex';
 //dotenv
 import * as dotenv from 'dotenv'
@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded());
 app.use(cors());
 
 //swagger
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 //routes
 app.use('/assignment', assignmentRoutes);
@@ -42,6 +42,6 @@ app.use('/user', userRoutes);
 
 
 //MongoDB Cloud Atlas
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server running on port : ${PORT}`));

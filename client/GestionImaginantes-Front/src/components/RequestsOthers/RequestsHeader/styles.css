@@ -1,0 +1,15 @@
+
+.title-row-solicitudes {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+}
+
+.toggle-intercambios-solicitudes{
+    margin-top: auto;
+    margin-bottom: 4px;
+    height: 30px;
+}

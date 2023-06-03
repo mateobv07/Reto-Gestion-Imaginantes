@@ -22,7 +22,3 @@ export const getUser = async (req, res) => {
 export const createUser = async (req, res) => {
     res.status(201);
 }
-
-export const updateUser = async (req, res) => {
-    res.status(200);
-}

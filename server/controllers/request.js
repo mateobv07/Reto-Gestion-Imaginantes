@@ -62,7 +62,6 @@ export const updateRequest = async (req, res) => {
         .where('id', id)
         .update({ status, initalAvailableDate, endAvailableDate, assignmentResponseID })
         .then(request => {
-            console.log(request)
             if (request) {
                 return res.status(200).json({"message": "Updated successfully"});
             }

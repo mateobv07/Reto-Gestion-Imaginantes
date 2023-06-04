@@ -4,9 +4,11 @@ export const getAssignments = async (req, res) => {
     const { studentID } = req.params;
     const status  = req.query.status? req.query.status : 0;
 
-    db('Assignment')
+    db.select('Task.name', 'Assignment.dueDate', 'Assignment.status')
+    .from('Assignment')
         .where('studentID', studentID)
         .andWhere('status', status)
+        .join('Task', 'Task.id', '=', 'Assignment.taskID')
         .orderBy('dueDate', 'asc')
         .then(assignment => {
             if (assignment?.length) {

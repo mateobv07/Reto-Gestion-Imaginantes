@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
+import axios from "axios"
 import { Grid } from "@mui/material";
 import { useCallback } from "react";
 import TaskProgress from "../components/TaskProgress/TaskProgress";
@@ -28,6 +29,23 @@ const Progreso = () => {
     { name: "Taller de Juegos", date: "20 de Mayo", completed: false },
     { name: "Taller de Pinturas", date: "20 de Mayo", completed: false },
   ]);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    getSolicitudes() 
+  },[]);
+
+  const getSolicitudes = () =>{
+    axios.get('http://localhost:3000/assignment/A01635675/?status=0')
+    .then(function (response) {
+    // handle success
+    setTasks(response.data)
+  })
+    .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  }
 
   const handleTaskCompletion = useCallback(
     (index) => {

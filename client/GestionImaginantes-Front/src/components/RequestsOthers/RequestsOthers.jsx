@@ -23,13 +23,13 @@ const RequestsOthers = ({intercambios,intercambiosPropios, solicitudes, userInfo
         </div>
         <hr className="gray-divider"/>
         <div className="table-requests-container">
-            {alignment ? intercambios.map((row) => 
-                (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
-                <TableOwnPending intercambiosPropios={intercambiosPropios} solicitudesPropias={solicitudes}/>
+            {alignment ? intercambios.map((row) =>
+                        (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
+                        <TableOwnPending intercambiosPropios={intercambiosPropios} solicitudesPropias={solicitudes}/>
             }
         </div>
         </Box>
     );
   }
-  
+
   export default RequestsOthers;

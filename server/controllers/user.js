@@ -6,7 +6,6 @@ export const login = async (req, res) => {
 
 export const getUser = async (req, res) => {
     const { studentID } = req.params;
-    console.log(studentID)
     db('User')
     .where('studentID',studentID)
     .first()

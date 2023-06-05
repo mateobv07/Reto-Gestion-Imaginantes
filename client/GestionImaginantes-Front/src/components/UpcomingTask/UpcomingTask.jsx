@@ -21,7 +21,7 @@ const UpcomingTask = ({task}) => {
         <div className='task-container'>
           <div>
             <p className="upcoming-task-title">{task.name}</p>
-            <p className="task-date-text">Fecha Límite: {task.date}</p>
+            <p className="task-date-text">Fecha Límite: {task.dueDate}</p>
           </div>
           <div className='task-description-container'>
             <p className="upcoming-task-description">{task.description}</p>

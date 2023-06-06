@@ -38,10 +38,10 @@ const ChipsEquipos = ({equipo1,equipo2}) => {
       },[]);
     
     return (
-    <TableCell align="right" sx={{width:"300px"}}>
+    <div align="right" sx={{width:"300px"}}>
         <Chip className="chip-interno" label={equipo1} variant="outlined" sx={{color:colorInterno, borderColor:colorInterno}}/>
         <Chip className="chip-externo" label={equipo2} variant="outlined" sx={{color:colorExterno, borderColor:colorExterno}}/>
-    </TableCell>
+    </div>
     );
   }
   

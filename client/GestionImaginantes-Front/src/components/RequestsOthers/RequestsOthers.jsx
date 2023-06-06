@@ -24,8 +24,8 @@ const RequestsOthers = ({intercambios,intercambiosPropios, solicitudes, userInfo
         <hr className="gray-divider"/>
         <div className="table-requests-container">
             {alignment ? intercambios.map((row) => 
-                        (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
-                        <TableOwnPending intercambiosPropios={intercambiosPropios} solicitudesPropias={solicitudes}/>
+                (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
+                <TableOwnPending intercambiosPropios={intercambiosPropios} solicitudesPropias={solicitudes}/>
             }
         </div>
         </Box>

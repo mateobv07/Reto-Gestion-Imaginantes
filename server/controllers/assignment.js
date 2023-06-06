@@ -22,9 +22,11 @@ export const getAssignments = async (req, res) => {
 export const getUpcomingAssignment = async (req, res) => {
     const { studentID } = req.params;
 
-    db('Assignment')
+    db.select('Task.name', 'Assignment.dueDate', 'Task.description')
+        .from('Assignment')
         .where('studentID',studentID)
         .andWhere('status', 0)
+        .join('Task', 'Task.id', '=', 'Assignment.taskID')
         .orderBy('dueDate', 'asc')
         .first()
         .then(assignment => {

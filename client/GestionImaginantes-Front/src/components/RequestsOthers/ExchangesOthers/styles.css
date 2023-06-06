@@ -1,0 +1,46 @@
+.row-things {
+  font-weight: bold !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  font-family: Futura !important;
+  font-size: 15.5px;
+  color: #4b5055;
+}
+
+.row-date {
+  font-weight: 500 !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  font-family: Futura !important;
+  font-size: 15.5px;
+  color: #a0a1a3;
+}
+
+.row-format {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+
+.chip-interno {
+  size: medium;
+  font-family: Futura !important;
+  background: #ffffff !important;
+  z-index: 2;
+  position: relative;
+  width: 110px;
+  border-width: 2px !important;
+}
+.chip-externo {
+  size: medium;
+  font-family: Futura !important;
+  background: #ffffff !important;
+  right: 25px;
+  z-index: 3;
+  position: relative;
+  width: 110px;
+  border-width: 2px !important;
+}

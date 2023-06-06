@@ -7,10 +7,12 @@ import MyRequests from "../components/MyRequests/MyRequests";
 
 
 const Inicio = () => {
-    const [upcomingTask, setUpcomingTask] = useState({})
+    const [upcomingTask, setUpcomingTask] = useState(null)
+    const [announcements, setAnnouncements] = useState([])
 
     useEffect(() => {
         getRequests()
+        getAnnouncements()
       }, []);
 
 
@@ -24,10 +26,19 @@ const Inicio = () => {
             console.log(error);
         })
     }
-    
-    
 
-    const requests = [{id:1, title:"Taller Juegos", status:"En espera de confirmación"}, {id:2, title:"Taller Lectura", status:"En espera de confirmación"}, {id:3, title:"Taller Instrumentos", status:"En espera de confirmación"}, {id:4, title:"Taller Juegos", status:"En espera de confirmación"}]
+    const getAnnouncements = () => {
+        axios.get('http://localhost:3000/announcement/')
+        .then(function (response) {
+            console.log(response.data)
+            setAnnouncements(response.data)
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    }
+
+    const requests = [{id:1, title:"Taller Juegos", status:"En espera de confirmación"}, {id:2, title:"Taller Lectura", status:"En espera de confirmación"}, {id:3, title:"Taller Instrumentos", status:"En espera de confirmación"}, {id:4, title:"Taller Juegos", status:"En espera de confirmación"}, {id:5, title:"Taller Juegos", status:"En espera de confirmación"}, {id:6, title:"Taller Lectura", status:"En espera de confirmación"}]
     return (
         <Grid container spacing={3} sx={{mt:0}}>
             <Grid item md={7} xs={12}>
@@ -37,7 +48,7 @@ const Inicio = () => {
                 <MyRequests requests={requests}/>
             </Grid>
             <Grid item md={12} xs={12}>
-                <Announcements/>
+                <Announcements announcements={announcements} />
             </Grid>
         </Grid>
     );

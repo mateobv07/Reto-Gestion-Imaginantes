@@ -16,10 +16,9 @@ const ExchangesOthers = ({request,userInfo}) => {
   return (
     <div className="row-format">
         <Stack spacing={0}>
-          <p className="row-things"> {request.name}</p>
+          <p className="row-things">{request ? request.name : <p>Loading</p>}</p>
           <p className="row-date">
-            {" "}
-            De: {userInfo.userName}{" "}
+            De: {userInfo ? userInfo.userName : "BUENAS"}
           </p>
         </Stack>
         <Chip
@@ -28,10 +27,10 @@ const ExchangesOthers = ({request,userInfo}) => {
           sx={{ fontFamily: "Futura", background: "#e6e8eb" }}
           onClick={handleClick}
         />
-      {request ? 
+      {userInfo && request ? 
       <ChipsEquipos
         equipo1={request.team}
-        equipo2={userInfo.team}/> : <p>Loading</p>}
+        equipo2={userInfo.team}/> : "Loading"}
         <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
     </div>
   );

@@ -16,7 +16,6 @@ const UpcomingTask = ({task}) => {
           <BiTask size={24} color='#FFFFFF' />
         </Box>
       </div>
-
       { task ?
         <div className='task-container'>
           <div>

@@ -10,12 +10,13 @@ const MyRequests = ({requests}) => {
 
   return (
     <Box className="task-card-container" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-      <div className='title-row pointer' onClick={() => navigate("/solicitudes")}>
+      <div className='title-row-r pointer' onClick={() => navigate("/solicitudes")}>
         <p className='card-title' >SOLICITUDES PENDIENTES</p>
         <Box className='round-paper'>
           <TbBellRinging size={24} color='#FFFFFF' />
         </Box>
       </div>
+      <hr className="line"/>
       <div className="request-list-container">
         {requests.map((request) => (
           <Request key={request.id} request={request}/>

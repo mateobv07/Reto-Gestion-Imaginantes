@@ -1,14 +1,11 @@
-import React from "react";
-import { Box, Button } from "@mui/material";
+import React from 'react';
+import { Box } from "@mui/material";
 import './styles.css'
 
 
-const Calendar = () => {
+const Calendar = ({tasks}) => {
     return (
         <Box className="calendar-card-container" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)" }}>
-            <div className='title-row'>
-            
-            </div>
         </Box>
     );
 }

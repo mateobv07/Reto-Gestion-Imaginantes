@@ -6,9 +6,9 @@
 }
 
 .announcements-container{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     overflow: auto;
-    height: calc(100% - 62px);
+    height: calc(100% - 70px);
 }
 
 .announcement-card {

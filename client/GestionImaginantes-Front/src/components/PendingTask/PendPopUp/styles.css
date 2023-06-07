@@ -1,0 +1,117 @@
+/* Este es para centrar el container del pop-up*/
+.popup-container {
+  border-radius: 10px;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  width: 430px;
+  height: 580px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*-----------------Botón de cancelar----------------------*/
+.popup-cancel-container{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline-end: 20px;
+}
+/*Este es el icono de x, lo alinea a la derecha superior*/
+.popup-cancel-icon {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2F1F1 !important;
+  height: 35px;
+  width: 35px;
+  border-radius: 50% !important;
+}
+/*--------------Titulo, Fecha y Descripción--------------*/
+.popup-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 280px;
+  height: 10vh;
+  text-align: center;
+}
+
+.popup-task-title {
+  font-family: Futura !important;
+  font-size: 22px !important;
+  color: #4B5055;
+  margin-bottom: 0px;
+  margin-top: -20px;
+}
+
+.popup-task-date {
+  margin-top: 5px;
+  font-family: Futura !important;
+  font-size: 16px !important;
+  color: #A3AFBA;
+}
+
+.popup-description-container{
+  overflow: auto;
+  height: 220px;
+  width: 360px;
+  border-radius: 44px;
+  background-color: #5EB2C2;
+}
+/*-----------Botones de Realizado y Cambiar--------------*/
+.popup-button-container{
+  height: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-left: 36px;
+  padding-right: 35px;
+}
+/*Boton de cambiado*/
+.popup-button-change{
+  border-radius: 44px;
+  height: 58px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Futura!important;
+  font-size: 20px !important;
+  color: #ffffff;
+  background-color: #A3AFBA;
+}
+/*Boton de realizado*/
+.popup-button-done{
+  border-radius: 44px;
+  height: 58px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Futura!important;
+  font-size: 20px !important;
+  color: #ffffff;
+  background-color: #5EB2C2;
+}
+/*----------------------Comentario-----------------------*/
+.popup-comment-container{
+  padding-left: 35px;
+  padding-right: 35px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 130px;
+}
+
+.popup-comment-text{
+  padding-left: 10px;
+  font-family: Futura!important;
+  font-size: 14px !important;
+  color: #4B5055;
+  margin-top: 10px;
+}

@@ -4,9 +4,9 @@ import React from "react";
 import './styles.css'
 
 
-const ButtonRandom = ({alignment, handleChange}) => {
+const ButtonAlternate = ({alignment, handleChange}) => {
       return (
-        <ToggleButtonGroup className="toggle-intercambios-solicitudes"
+        <ToggleButtonGroup className="toggle-exchange-requests"
             value={alignment}
             exclusive
             onChange={handleChange}>
@@ -20,4 +20,4 @@ const ButtonRandom = ({alignment, handleChange}) => {
       );
 }
 
-export default ButtonRandom;
+export default ButtonAlternate;

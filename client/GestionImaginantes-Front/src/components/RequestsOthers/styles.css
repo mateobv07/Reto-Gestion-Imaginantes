@@ -1,9 +1,37 @@
 
-.solicitudes-container {
+.requests-exchange-container {
     border-radius: 5px;
     background-color: #FFFFFF !important;
-    height: 593px !important;
-    overflow: auto; 
+    height: 72.5vh !important;
+}
+
+.gray-divider{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    height: 1px;
+    border: none;
+    background: #bcbec2;
+}
+
+.table-requests-container {
+    height: 70vh !important;
+    overflow-y: auto;
+}
+
+
+.title-row-requests {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    flex-direction: row !important;
+}
+
+.toggle-exchange-requests{
+    margin-top: auto;
+    margin-bottom: 4px;
+    height: 30px;
 }
 
 .card-title-request {
@@ -14,11 +42,4 @@
     color: #4B5055;
 }
 
-.linea-gris{
-    margin-top: 10px;
-    margin-bottom: 1px;
-    height: 1px;
-    border: none;
-    background: #bcbec2;
-}
 

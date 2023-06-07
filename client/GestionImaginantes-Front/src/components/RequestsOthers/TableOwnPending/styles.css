@@ -1,0 +1,12 @@
+.tables-in-tables {
+    height: 69.5vh !important;
+    overflow-y: auto;
+}
+.table-titles {
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #4B5055;
+    text-align: center;
+}

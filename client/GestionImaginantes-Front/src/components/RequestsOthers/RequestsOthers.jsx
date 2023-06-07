@@ -1,33 +1,35 @@
 import React, {useState} from "react";
-import { Table, TableBody, TableContainer} from "@mui/material";
-import RequestOther from "./RequestOther/RequestOther";
-import RequestsHeader from "./RequestsHeader/RequestsHeader";
-import SolicitudesRow from "./SolicitudesRow/SolicitudesRow";
+import { Table, TableBody, TableRow, TableContainer, Box, ToggleButtonGroup, ToggleButton} from "@mui/material";
+import ExchangeOthers from "./ExchangesOthers/ExchangesOthers";
+import { TbArrowsLeftRight } from 'react-icons/tb';
+import TableOwnPending from "./TableOwnPending/TableOwnPending";
+import ButtonAlternate from "./ButtonAlternate";
+
 import './styles.css';
 
-const RequestsOthers = ({requests,solicitudes}) => {
+const RequestsOthers = ({intercambios,intercambiosPropios, solicitudes, userInfo}) => {
     const [alignment, setAlignment] = useState(true);
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
       };
 
     return (
-      <TableContainer className="solicitudes-container" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-        <RequestsHeader alignment={alignment} handleChange={handleChange}/>
-        <hr className="linea-gris"/>
-        <div className="solicitudes-intercambios-container ">
-            <Table padding="normal">
-                <TableBody>
-                    {alignment ? requests.map((row) => 
-                        (<RequestOther key={row.id} request={row}/>)):
-                        solicitudes.map((row) => 
-                        (<SolicitudesRow key={row.id} solicitud={row}/>))
-                    }
-                </TableBody>
-            </Table>
+      <Box className="requests-exchange-container" sx={{overflow:"hidden" ,boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
+        <div className='title-row-requests'>
+            <ButtonAlternate alignment={alignment} handleChange={handleChange}/>
+            <Box className='round-paper' sx={{mt:"10px"}}>
+                <TbArrowsLeftRight size={24} color='#FFFFFF' />
+            </Box>
         </div>
-        </TableContainer>
+        <hr className="gray-divider"/>
+        <div className="table-requests-container">
+            {alignment ? intercambios.map((row) =>
+                        (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
+                        <TableOwnPending intercambiosPropios={intercambiosPropios} solicitudesPropias={solicitudes}/>
+            }
+        </div>
+        </Box>
     );
   }
-  
+
   export default RequestsOthers;

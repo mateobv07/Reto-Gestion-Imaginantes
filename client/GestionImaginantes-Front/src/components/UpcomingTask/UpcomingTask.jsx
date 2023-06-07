@@ -20,14 +20,16 @@ const UpcomingTask = ({task}) => {
         <div className='task-container'>
           <div>
             <p className="upcoming-task-title">{task.name}</p>
-            <p className="task-date-text">Fecha Límite: {task.date}</p>
+            <p className="task-date-text">Fecha Límite: {new Date(task.dueDate).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           </div>
           <div className='task-description-container'>
             <p className="upcoming-task-description">{task.description}</p>
           </div>
         </div>
         :
-        <p> Sin tareas activas </p>
+        <center>
+          <p className="upcoming-task-title">Sin tareas activas</p>
+        </center>
       }
     </Box>
   );

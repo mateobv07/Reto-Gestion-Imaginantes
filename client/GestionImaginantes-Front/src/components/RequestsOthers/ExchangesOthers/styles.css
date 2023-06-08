@@ -13,15 +13,31 @@
   margin-top: auto;
   margin-bottom: auto;
   margin-right: auto;
+  margin-left: 5vh;
+  font-family: Futura !important;
+  font-size: 15.5px;
+  color: #a0a1a3;
+}
+
+.row-name {
+  font-weight: 500 !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
   font-family: Futura !important;
   font-size: 15.5px;
   color: #a0a1a3;
 }
 
 .row-format {
+  width: auto;
+  padding: 20px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #bcbec2;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-evenly !important;
 }
 
 
@@ -30,17 +46,36 @@
   font-family: Futura !important;
   background: #ffffff !important;
   z-index: 2;
-  position: relative;
-  width: 110px;
+  position: sticky;
+  width:fit-content;
   border-width: 2px !important;
+  align-self: center;
 }
 .chip-externo {
   size: medium;
   font-family: Futura !important;
   background: #ffffff !important;
-  right: 25px;
   z-index: 3;
+  right: 25px;
   position: relative;
-  width: 110px;
+  width: fit-content;
   border-width: 2px !important;
+}
+.chip-popup {
+  position:absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto !important;
+  font-family: Futura !important;
+  background: #e6e8eb !important;
+  margin-right: 4.5vh !important;
+  margin-left: 4.5vh !important;
+}
+
+.chip-equipos-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 4.5vh;
+  margin-left: 4.5vh;
+  display: flex;
+  flex-flow: row nowrap;
 }

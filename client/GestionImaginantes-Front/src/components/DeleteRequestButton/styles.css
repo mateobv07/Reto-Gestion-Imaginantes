@@ -1,0 +1,25 @@
+.alert-title {
+    font-weight: bold !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15px;
+    color: #4b5055;
+}
+
+.alert-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 14px;
+    color: #4b5055;
+}
+  
+.dialog-button {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Futura !important;
+    font-size: 14px;
+}

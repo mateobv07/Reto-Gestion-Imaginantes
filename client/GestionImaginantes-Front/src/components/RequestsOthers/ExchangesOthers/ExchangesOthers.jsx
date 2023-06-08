@@ -15,24 +15,26 @@ const ExchangesOthers = ({request,userInfo}) => {
 
   return (
     <div className="row-format">
-        <Stack spacing={0}>
-          <p className="row-things"> {request.name}</p>
-          <p className="row-date">
-            {" "}
-            De: {userInfo.userName}{" "}
+        <Stack spacing={0} sx={{marginRight:"4.5vh"}}>
+          <p className="row-things">{request ? request.name : <p>Loading</p>}</p>
+          <p className="row-name">
+            De: {userInfo ? request.userName : "Loading"}
+
           </p>
         </Stack>
         <Chip
           label="Clickable"
           variant="outlined"
-          sx={{ fontFamily: "Futura", background: "#e6e8eb" }}
+          className="chip-popup"
           onClick={handleClick}
         />
       {request ?
       <ChipsEquipos
-        equipo1={request.team}
-        equipo2={userInfo.team}/> : <p>Loading</p>}
-        <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
+        equipo2={request.team}
+        equipo1={userInfo.team}/> : "Loading"}
+
+      <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
+
     </div>
   );
 };

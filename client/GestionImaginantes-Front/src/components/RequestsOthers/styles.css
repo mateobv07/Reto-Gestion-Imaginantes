@@ -10,7 +10,7 @@
     margin-bottom: 0px;
     height: 1px;
     border: none;
-    background: #bcbec2;
+    background: #8e9091; 
 }
 
 .table-requests-container {
@@ -23,7 +23,7 @@
     margin-left: 15px !important;
     margin-right: 15px !important;
     display: flex !important;
-    flex-wrap: wrap !important;
+    flex-wrap: nowrap !important;
     justify-content: space-between !important;
     flex-direction: row !important;
 }

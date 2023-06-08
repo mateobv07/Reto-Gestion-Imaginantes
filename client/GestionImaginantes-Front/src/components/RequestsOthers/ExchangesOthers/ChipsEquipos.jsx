@@ -1,4 +1,3 @@
-import { TableCell } from "@mui/material";
 import React,  {useEffect} from "react";
 import './styles.css';
 import Chip from '@mui/material/Chip';
@@ -6,42 +5,22 @@ import Chip from '@mui/material/Chip';
 
 const ChipsEquipos = ({equipo1,equipo2}) => {
 
-    const [colorInterno, setColorInterno] = React.useState("red");
-    const [colorExterno, setColorExterno] = React.useState("red");
-
-    const changeColorsInterno = () =>{
-        if (equipo1=="0") {
-            return;
-        }
-        else if (equipo1=="1") {
-            setColorInterno("blue");
-        }
-        else {
-            setColorInterno("green");
-        }
-    }
-    const changeColorsExterno = () =>{
-        if (equipo2=="0") {
-            return;
-        }
-        else if (equipo2=="1") {
-            setColorExterno("blue");
-        }
-        else {
-            setColorExterno("green");
-        }
-    }
+    const [propiedadesInterno, setPropiedadesInterno] = React.useState([]);
+    const [propiedadesExterno, setPropiedadesExterno] = React.useState([]);
+    
+    const colorTeam = ["red", "blue", "green"];
+    const typeTeam = ["Primer Equipo", "Segundo Equipo", "Tercer Equipo"]
 
     useEffect(() => {
-        changeColorsInterno();
-        changeColorsExterno();
-      },[]);
-
+        setPropiedadesInterno([typeTeam[equipo1],colorTeam[equipo1]]);
+        setPropiedadesExterno([typeTeam[equipo2],colorTeam[equipo2]]);
+      },[equipo1,equipo2]);
+    
     return (
-    <TableCell align="right" sx={{width:"300px"}}>
-        <Chip className="chip-interno" label={equipo1} variant="outlined" sx={{color:colorInterno, borderColor:colorInterno}}/>
-        <Chip className="chip-externo" label={equipo2} variant="outlined" sx={{color:colorExterno, borderColor:colorExterno}}/>
-    </TableCell>
+    <div className="chip-equipos-container">
+        <Chip className="chip-interno" label={propiedadesInterno[0]} variant="outlined" sx={{color:propiedadesInterno[1], borderColor:propiedadesInterno[1], paddingRight:"10px", paddingLeft:"10px", paddingBottom:"auto"}}/>
+        <Chip className="chip-externo" label={propiedadesExterno[0]} variant="outlined" sx={{color:propiedadesExterno[1], borderColor:propiedadesExterno[1], paddingRight:"10px", paddingLeft:"10px", paddingBottom:"auto"}}/>
+    </div>
     );
   }
 

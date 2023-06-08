@@ -23,5 +23,5 @@ const ChipsEquipos = ({equipo1,equipo2}) => {
     </div>
     );
   }
-  
+
   export default ChipsEquipos;

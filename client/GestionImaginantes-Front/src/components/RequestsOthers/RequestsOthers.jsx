@@ -50,6 +50,6 @@ const RequestsOthers = ({intercambios, userInfo}) => {
       </div>
     </Box>
   );
-  }
-  
+ }
+
   export default RequestsOthers;

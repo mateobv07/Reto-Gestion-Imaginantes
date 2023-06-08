@@ -16,6 +16,7 @@ const MyRequests = ({requests}) => {
           <TbBellRinging size={24} color='#FFFFFF' />
         </Box>
       </div>
+      <hr className="line"/>
       <div className="request-list-container">
         {requests.map((request) => (
           <Request key={request.id} request={request}/>

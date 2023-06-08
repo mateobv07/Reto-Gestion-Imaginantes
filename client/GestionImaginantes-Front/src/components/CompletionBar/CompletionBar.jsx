@@ -7,9 +7,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import "./styles.css";
 
-const CompletionBar = ({ tasks }) => {
+const CompletionBar = ({ tasks, totalTasks }) => {
   const theme = useTheme();
-  const totalTasks = tasks.length;
   const completedTasks = useMemo(
     () => tasks.filter((task) => task.completed).length,
     [tasks]

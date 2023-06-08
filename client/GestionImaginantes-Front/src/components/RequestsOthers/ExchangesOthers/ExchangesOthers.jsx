@@ -19,6 +19,7 @@ const ExchangesOthers = ({request,userInfo}) => {
           <p className="row-things">{request ? request.name : <p>Loading</p>}</p>
           <p className="row-name">
             De: {userInfo ? request.userName : "Loading"}
+
           </p>
         </Stack>
         <Chip
@@ -27,12 +28,13 @@ const ExchangesOthers = ({request,userInfo}) => {
           className="chip-popup"
           onClick={handleClick}
         />
-      {userInfo && request ? 
+      {request ?
       <ChipsEquipos
         equipo2={request.team}
         equipo1={userInfo.team}/> : "Loading"}
 
       <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
+
     </div>
   );
 };

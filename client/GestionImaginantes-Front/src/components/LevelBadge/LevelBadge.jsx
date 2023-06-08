@@ -11,7 +11,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
   const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 150 : 150;
   const sizeMedium = useMediaQuery(theme.breakpoints.down("md")) ? 120 : 150;
   const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 100 : 150;
-
+  
   const icons = [
     <FaMedal size={sizeLarge || sizeMedium || sizeSmall} color="#CD7F32" />,
     <FaAward size={sizeLarge || sizeMedium || sizeSmall} color="#C0C0C0" />,

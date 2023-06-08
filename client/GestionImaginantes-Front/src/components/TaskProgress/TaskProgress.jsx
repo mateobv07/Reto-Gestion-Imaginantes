@@ -35,8 +35,8 @@ const TaskProgress = ({ tasks, onTaskCompletion }) => {
             }`}
           >
             <CustomCheckbox
-              checked={task.completed}
-              onChange={() => onTaskCompletion(index)}
+              checked={true}
+              disabled
             />
             <p
               className={`taskprogress-title ${

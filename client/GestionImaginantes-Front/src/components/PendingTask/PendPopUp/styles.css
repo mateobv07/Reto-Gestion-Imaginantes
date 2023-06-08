@@ -70,6 +70,7 @@
   justify-content: space-between;
   padding-left: 36px;
   padding-right: 35px;
+  cursor: pointer;
 }
 /*Boton de cambiado*/
 .popup-button-change{
@@ -83,6 +84,7 @@
   font-size: 20px !important;
   color: #ffffff;
   background-color: #A3AFBA;
+  cursor: pointer;
 }
 /*Boton de realizado*/
 .popup-button-done{
@@ -96,6 +98,7 @@
   font-size: 20px !important;
   color: #ffffff;
   background-color: #5EB2C2;
+  cursor: pointer;
 }
 /*----------------------Comentario-----------------------*/
 .popup-comment-container{

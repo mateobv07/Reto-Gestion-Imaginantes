@@ -1,0 +1,84 @@
+.popup-confirm-container {
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    width: 430px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup-text-confirm-container{
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+    height: 10vh;
+    text-align: center;
+}
+/*------------------------Textos-----------------------*/
+.popup-confirm-task-title {
+    font-family: Futura !important;
+    font-size: 24px !important;
+    color: #4B5055;
+    margin-bottom: 0px;
+    margin-top: -20px;
+}
+/*¿Desea marcarla como realizada?*/
+.popup-confirm{
+    font-family: Futura !important;
+    font-size: 20px !important;
+    color: #4B5055;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+/*Pendiente al socioformador*/
+.popup-pending{
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 5px;
+    font-family: Futura !important;
+    font-size: 14px !important;
+    color: #A3AFBA;
+}
+/*-----------Botones de Realizado y Cambiar--------------*/
+.popup-confirm-button-container{
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-left: 46px;
+    padding-right: 45px;
+  }
+/*Boton de cambiado*/
+.popup-button-confirm{
+    border-radius: 44px;
+    height: 58px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura!important;
+    font-size: 20px !important;
+    color: #ffffff;
+    background-color: #A3AFBA;
+}
+/*Boton de realizado*/
+.popup-button-cancel{
+    border-radius: 44px;
+    height: 58px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura!important;
+    font-size: 20px !important;
+    color: #ffffff;
+    background-color: #5EB2C2;
+}
+

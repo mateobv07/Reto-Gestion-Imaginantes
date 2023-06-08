@@ -1,5 +1,5 @@
 .request-list-container {
-    margin-bottom: 5px;
-    height: 200px;
-    overflow-y: auto;
+    margin-bottom: 20px;
+    overflow: auto;
+    height: calc(100% - 82px);
 }

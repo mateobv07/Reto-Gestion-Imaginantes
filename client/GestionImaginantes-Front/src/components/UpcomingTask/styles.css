@@ -3,6 +3,7 @@
     background-color: #FFFFFF !important;
     min-height: 330px !important;
     height: 42.5vh;
+    overflow: hidden;
 }
 
 .task-container {
@@ -46,4 +47,6 @@
 }
 .upcoming-task-description {
     color: #FFFFFF;
+    margin-left: 6px;
+    margin-right: 6px;
 }

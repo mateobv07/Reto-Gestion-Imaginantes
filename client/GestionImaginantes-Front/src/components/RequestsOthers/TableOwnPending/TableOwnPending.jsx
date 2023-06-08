@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid,  Table, TableBody, Box } from "@mui/material";
-import AssignmentRow from "./AssignmentRow/AssignmentRow"
+import AssignmentRow from "../../AssignmentRow/AssignmentRow"
 import './styles.css';
 
 const TableOwnPending = ({intercambiosPropios, solicitudesPropias}) => {
@@ -14,7 +14,7 @@ const TableOwnPending = ({intercambiosPropios, solicitudesPropias}) => {
                     <Table padding="normal" sx={{marginBottom:"6.5vh"}}>
                         <TableBody>
                             {intercambiosPropios.map((row) => 
-                                (<AssignmentRow key={row.id} solicitud={row}/>))}
+                                (<AssignmentRow key={row.id} solicitud={row} tipo={true} />))}
                         </TableBody>
                     </Table>
                 </Box>
@@ -26,7 +26,7 @@ const TableOwnPending = ({intercambiosPropios, solicitudesPropias}) => {
                     <Table padding="normal" sx={{marginBottom:"6.5vh"}}>
                         <TableBody>
                             {solicitudesPropias.map((row) => 
-                                (<AssignmentRow key={row.id} solicitud={row}/>))}
+                                (<AssignmentRow key={row.id} solicitud={row} tipo={false} />))}
                         </TableBody>
                     </Table>
                 </Box>

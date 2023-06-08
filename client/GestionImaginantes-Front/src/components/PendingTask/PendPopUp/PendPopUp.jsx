@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, Button} from "@mui/material";
 import { BsXLg } from "react-icons/bs";
 import { styled } from "@mui/system";
 import "./styles.css";
@@ -30,6 +30,7 @@ const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
         <div className='popup-button-container'>
           <Box className='popup-button-done' onClick={popDone}>Realizado</Box>
           <Box className='popup-button-change' onClick={popCambio}>Cambio</Box>
+          <Button className=''>hola</Button> //rtgr___________________________________tnjh 
         </div>
 
         <div className='popup-comment-container'>

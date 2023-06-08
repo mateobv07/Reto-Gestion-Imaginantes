@@ -16,7 +16,7 @@ function App() {
      <TopBar progress={50} name={'Rodrigo Chavez'} level={'Nivel 50'}/>
      <Routes>
         <Route path="/" element={<Inicio />} />
-        <Route path="/progreso" element={<Progreso />} />
+        <Route path="/progreso" element={<Progreso completedTasks={10} totalTasks={20} />} />
         <Route path="/Solicitudes" element={<Solicitudes />} />
         <Route path="/tablero" element={<Tablero />} />
      </Routes>

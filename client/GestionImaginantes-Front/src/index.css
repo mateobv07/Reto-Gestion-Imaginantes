@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Futura, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
   background-color: #eff2f6;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

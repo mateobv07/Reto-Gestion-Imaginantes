@@ -10,14 +10,18 @@ const Solicitudes = () => {
     const [userInfo, setuserInfo] = React.useState(null);
 
     const getInfoIntercambios = () =>{
-        axios.get(('http://localhost:3000/request/' + userID))
+        axios.get(('http://localhost:3000/request/' + userID, {
+            headers: {'Authorization': localStorage.getItem('Auth')}
+        }))
         .then(res => {
         setOtherRequest(res.data);})
 
-        axios.get(('http://localhost:3000/user/' + userID))
+        axios.get(('http://localhost:3000/user/' + userID, {
+            headers: {'Authorization': localStorage.getItem('Auth')}
+        }))
         .then(res => {
         setuserInfo(res.data);})
-    } 
+    }
 
     useEffect(() => {
         getInfoIntercambios();

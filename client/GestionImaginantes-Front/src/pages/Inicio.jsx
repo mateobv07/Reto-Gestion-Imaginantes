@@ -17,7 +17,9 @@ const Inicio = () => {
 
 
     const getRequests = () => {
-        axios.get('http://localhost:3000/assignment/A01635675/upcoming')
+        axios.get('http://localhost:3000/assignment/A01635675/upcoming', {
+        headers: {'Authorization': localStorage.getItem('Auth')}
+        })
         .then(function (response) {
             console.log(response.data)
             setUpcomingTask(response.data)
@@ -28,7 +30,9 @@ const Inicio = () => {
     }
 
     const getAnnouncements = () => {
-        axios.get('http://localhost:3000/announcement/')
+        axios.get('http://localhost:3000/announcement/', {
+        headers: {'Authorization': localStorage.getItem('Auth')}
+        })
         .then(function (response) {
             console.log(response.data)
             setAnnouncements(response.data)

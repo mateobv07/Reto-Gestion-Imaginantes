@@ -15,7 +15,7 @@ const Announcements = ({announcements}) => {
       </div>
       <div className="announcements-container">
         {announcements.map((announcement) => (
-          <div className='announcement-card' >
+          <div className='announcement-card' key={announcement.id}>
             <Typography sx={{pt:1, px:1, fontWeight:600}} className='announcement-date-text'>
               {new Date(announcement.createdAt).toLocaleDateString('es-MX', {hour: "2-digit", minute: "2-digit", year: 'numeric', month: 'long', day: 'numeric' })}
             </Typography>

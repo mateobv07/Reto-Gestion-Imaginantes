@@ -17,7 +17,7 @@ export const login = async (req, res) => {
             }
             delete user.password;
             user['ip'] = requestIp.getClientIp(req);
-            const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '8m'});
+            const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '2h'});
 
             return res.status(200).json({user:user,accessToken:accessToken});
         }

@@ -21,7 +21,6 @@ const Inicio = () => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            console.log(response.data)
             setUpcomingTask(response.data)
         })
         .catch(function (error) {
@@ -34,7 +33,6 @@ const Inicio = () => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            console.log(response.data)
             setAnnouncements(response.data)
         })
         .catch(function (error) {

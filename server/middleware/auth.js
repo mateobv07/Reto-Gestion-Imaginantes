@@ -11,11 +11,14 @@ const AuthenticateToken = (req, res, next) => {
         const reqIP = requestIp.getClientIp(req);
         if (err || user.ip !== reqIP ) return res.status(401).json({"message": "Invalid Auth Token"});
 
-        if(user.exp - Math.round(Date.now() / 1000) < 300) {
+        //will expire in less than 30min
+        if(user.exp - Math.round(Date.now() / 1000) < 1800) {
             delete user.iat;
             delete user.exp;
-            const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '8m'});
+            const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '2h'});
             res.header('SET-AUTH', [accessToken]);
+        }else{
+            res.header('SET-AUTH', [null]);
         }
         req.user = user;
         next();

@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Route, Routes, Navigate, useLocation  } from 'react-router-dom';
 import axios from "axios";
 import axiosInterceptor from './utils/axiosInterceptor.js'
 import SideBar from './components/SideBar/SideBar';
@@ -13,17 +13,12 @@ import Tablero from './pages/Tablero';
 import './App.css'
 
 function App() {
-  const [user, setUser] = useState(localStorage.getItem('User'));
-
-  useEffect(() => {
-    if(localStorage.getItem('Auth')){
-        axios.defaults.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('Auth');;
-    }
-  }, []);
+  const [user, setUser] = useState(localStorage.getItem('User') ? JSON.parse(localStorage.getItem('User')) : null);
+  const atLogin = useLocation().pathname === '/login';
 
   return (
     <div className='mainContainer'>
-      {user &&
+      {(user && !atLogin) &&
         <>
           <SideBar />
           <TopBar progress={50} name={'Rodrigo Chavez'} level={'Nivel 50'}/>

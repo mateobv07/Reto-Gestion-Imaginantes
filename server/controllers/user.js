@@ -21,7 +21,7 @@ export const login = async (req, res) => {
 
             return res.status(200).json({user:user,accessToken:accessToken});
         }
-        res.status(200).json({'message':'Invalid student id'});
+        return res.status(401).json({'message':'Invalid student id'});
     })
     .catch(err => res.status(400).json({'message':'Unable to get user'}));
 

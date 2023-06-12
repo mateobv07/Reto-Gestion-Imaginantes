@@ -28,11 +28,10 @@ const ExchangesOthers = ({request,userInfo}) => {
           className="chip-popup"
           onClick={handleClick}
         />
-      {request ?
+      {(request && userInfo) ?
       <ChipsEquipos
         equipo2={request.team}
         equipo1={userInfo.team}/> : "Loading"}
-
       <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
 
     </div>

@@ -1,27 +1,27 @@
 import React from "react";
-import { DialogActions, Dialog, IconButton, DialogContent, DialogContentText, DialogTitle, Button} from "@mui/material";
+import {Dialog, IconButton} from "@mui/material";
 import { MdDelete } from "react-icons/md";
 import './styles.css';
-import axios from 'axios';
+import DeleteRequestDialog from "../DeleteRequestDialog/DeleteRequestDialog";
 
 
 const DeleteRequestButton = ({id, tipo}) => {
   const [open, setOpen] = React.useState(false);
 
+  
+  const handleExit = () => {
+    setOpen(false);
+  }
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleClickDeleteRequest = () => {
+    setOpen(false);  
   };
 
-  const handleClickRequest = ({id}) => {
-    handleClose;
-  };
-
-  const handleClickAssignment = () => {
-    handleClose;
+  const handleClickDeleteAssignment = () => {
+    setOpen(false);  
   };
 
   return (
@@ -29,23 +29,11 @@ const DeleteRequestButton = ({id, tipo}) => {
       <IconButton aria-label="delete" onClick={handleClickOpen}>
         <MdDelete/>
       </IconButton>
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description">
-        <DialogTitle id="alert-dialog-title" className="alert-title">
-          {"¿Seguro que quieres borrar esta solicitud?"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description" className="alert-text">
-            {"Esta acción no se puede deshacer, tendrás que volver a hacer tu solicitud."}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-            {tipo ? <Button className="dialog-button" variant="outlined" color="error" onClick={handleClose}> Borrar TEST1 </Button> : <Button className="dialog-button" variant="outlined" color="error" onClick={handleClose}> Borrar TEST2</Button>}
-            <Button className="dialog-button" onClick={handleClose} sx={{color:"#4b5055"}}> Salir</Button>
-        </DialogActions>
+      <Dialog open={open} onClose={handleExit}>
+        { tipo ? 
+            <DeleteRequestDialog handleExit={handleExit} handleDelete={handleClickDeleteRequest} tipo={tipo}/> :
+            <DeleteRequestDialog handleExit={handleExit} handleDelete={handleClickDeleteAssignment} tipo={tipo}/>
+          } 
       </Dialog>
     </div>
     );

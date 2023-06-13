@@ -10,9 +10,9 @@ export const getAllAssignmentComments = async (req, res) => {
             if (comments?.length) {
                 return res.status(200).json(comments);
             }
-            res.status(200).json('No comments');
+            res.status(200).json({ "message": 'No comments'});
         })
-        .catch(err => res.status(400).json('Unable to get comments', err));
+        .catch(err => res.status(400).json({ "message": 'Unable to insert comment '}));
 }
 
 export const createComment= async (req, res) => {

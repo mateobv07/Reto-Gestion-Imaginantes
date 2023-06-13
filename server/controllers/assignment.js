@@ -2,13 +2,19 @@ import { db } from '../index.js'
 
 export const getAssignments = async (req, res) => {
     const { studentID } = req.params;
+    const { initialDate, endDate } = req.query;
     const status  = req.query.status? req.query.status : 0;
 
-    db.select('Task.name', 'Assignment.dueDate', 'Assignment.status')
+
+    db.select('Assignment.id','Task.name', 'Assignment.dueDate', 'Assignment.status')
     .from('Assignment')
         .where('studentID', studentID)
         .andWhere('status', status)
         .join('Task', 'Task.id', '=', 'Assignment.taskID')
+        .modify(function(queryBuilder) {
+            if (initialDate) queryBuilder.where('Assignment.dueDate','>=', initialDate);
+            if(endDate) queryBuilder.where('Assignment.dueDate', '<=', endDate);
+        })
         .orderBy('dueDate', 'asc')
         .then(assignment => {
             if (assignment?.length) {

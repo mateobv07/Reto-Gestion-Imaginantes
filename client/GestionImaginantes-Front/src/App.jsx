@@ -1,8 +1,11 @@
-import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import { Route, Routes, Navigate, useLocation  } from 'react-router-dom';
+import axios from "axios";
+import axiosInterceptor from './utils/axiosInterceptor.js'
 import SideBar from './components/SideBar/SideBar';
 import TopBar from './components/TopBar/TopBar';
 import Inicio from './pages/Inicio';
+import Login from './pages/Login';
 import Progreso from './pages/Progreso';
 import Solicitudes from './pages/Solicitudes';
 import Tablero from './pages/Tablero';
@@ -10,16 +13,24 @@ import Tablero from './pages/Tablero';
 import './App.css'
 
 function App() {
+  const [user, setUser] = useState(localStorage.getItem('User') ? JSON.parse(localStorage.getItem('User')) : null);
+  const atLogin = useLocation().pathname === '/login';
+
   return (
     <div className='mainContainer'>
-     <SideBar />
-     <TopBar progress={50} name={'Rodrigo Chavez'} level={'Nivel 50'}/>
-     <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/progreso" element={<Progreso completedTasks={10} totalTasks={20} />} />
-        <Route path="/Solicitudes" element={<Solicitudes />} />
-        <Route path="/tablero" element={<Tablero />} />
-     </Routes>
+      {(user && !atLogin) &&
+        <>
+          <SideBar />
+          <TopBar progress={Math.round(user.completedTasks / user.totalTasks * 100)} name={user.name} level={'Nivel 50'}/>
+        </>
+      }
+      <Routes>
+          <Route path="/login" exact element={<Login setUser={setUser}/>} />
+          <Route path="/" exact element={user ? <Inicio/> : <Navigate to="/login"/>} />
+          <Route path="/progreso" exact element={user ? <Progreso completedTasks={user.completedTasks} totalTasks={user.totalTasks}/> : <Navigate to="/login"/>} />
+          <Route path="/Solicitudes" exact element={user ? <Solicitudes /> : <Navigate to="/login"/>} />
+          <Route path="/tablero" exact element={user ? <Tablero /> : <Navigate to="/login"/>} />
+      </Routes>
     </div>
   )
 }

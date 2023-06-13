@@ -2,6 +2,7 @@ import { db } from '../index.js'
 
 export const getOtherRequests = async (req, res) => {
     const { studentID } = req.user;
+
     db.select('User.name as userName', 'Request.id', 'Task.name', 'dueDate', 'team')
     .from('Request')
     .where('Request.status', 0)

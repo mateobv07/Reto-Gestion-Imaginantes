@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, TextField } from "@mui/material";
+import { Box, TextField, Button} from "@mui/material";
 import { BsXLg } from "react-icons/bs";
 import { styled } from "@mui/system";
 import "./styles.css";
@@ -23,13 +23,15 @@ const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
 
         <div className='popup-text-container'>
           <p className='popup-task-title'>{task.name}</p>
-          <p className='popup-task-date'>Fecha Límite: {task.date}</p>
-          <Box className='popup-description-container'></Box>
+          <p className='popup-task-date'>Fecha Límite: {new Date(task.dueDate).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          <Box className='popup-description-container'>
+          <div className="desc-container">{task.description}</div>
+          </Box>
         </div>
 
         <div className='popup-button-container'>
-          <Box className='popup-button-done' onClick={popDone}>Realizado</Box>
-          <Box className='popup-button-change' onClick={popCambio}>Cambio</Box>
+          <button className='popup-button-done' onClick={popDone}>Realizado</button>
+          <button className='popup-button-change' onClick={popCambio}>Cambio</button>
         </div>
 
         <div className='popup-comment-container'>

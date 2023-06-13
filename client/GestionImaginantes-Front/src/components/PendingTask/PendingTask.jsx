@@ -15,11 +15,17 @@ const PendingTask = ({tasks}) => {
                 </Box>
             </div>
             <hr className="div-line"/>    
-            <div className="pending-task-list-container">
-                {tasks.map((task) => 
-                    (<PendTask task={task}/>
-                ))}
-            </div>      
+            { tasks ?
+                <div className="pending-task-list-container">
+                    {tasks.map((task) => 
+                        (<PendTask task={task}/>
+                    ))}
+                </div>
+                :
+                <center>
+                    <p className="upcoming-task-title">Sin tareas pendientes</p>
+                </center>      
+            }
         </Box>
     );
 }

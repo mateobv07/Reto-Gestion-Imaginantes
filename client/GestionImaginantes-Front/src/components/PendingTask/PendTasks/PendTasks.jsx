@@ -20,16 +20,17 @@ const PendTask = ({ task }) => {
 
   const handleCheckboxClick = () => { // Función del CheckBox que activa el Pop-up
     setIsPopupOpen(true);
+    setIsChecked(true);
   };
   
   const handleConfirm = () => {   // Función del Pop-up que si se confirma, alterna el valor de la CheckBox 
     setIsConfirmOpen(false);       
-    if (isChecked) {
-      setIsChecked(false);
-    } 
-    else {
-      setIsChecked(true);
-    }
+    // if (isChecked) {
+    //   setIsChecked(false);
+    // } 
+    // else {
+    //   setIsChecked(true);
+    // }
   };
 
   const handleDone = () => {
@@ -40,13 +41,14 @@ const PendTask = ({ task }) => {
   const handleCancel = () => {   // Función del Pop-up que si se cancela, no cambia el estado de la CheckBox
     setIsPopupOpen(false);
     setIsConfirmOpen(false);       // El Pop-up se desactiva
+    setIsChecked(false);
   };
 
   const handleCambio = () => {   // Función del Pop-up que si se cancela, no cambia el estado de la CheckBox
     setIsPopupOpen(false);       // El Pop-up se desactiva
     navigate("/solicitudes");
   };
-
+  console.log(task);
   // Sintaxis de condicional --- condicion ? valor_si_verdadero : valor_si_falso;
   return (
     <Box className="pending-task-container" display="flex" alignItems="center">
@@ -61,7 +63,7 @@ const PendTask = ({ task }) => {
 
       <Typography className={`pending-task-date ${isChecked ? 'check-cross' : ''}`} // Para tachar la fecha y alinear la fecha un poco más a la izquierda
       style={{ paddingRight: "25px" }}>
-        Fecha Límite: {task.date}
+        Fecha Límite: {new Date(task.dueDate).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
       </Typography>
 
       <Dialog open={isPopupOpen} //El primer pop-up que marca como realizado o pide cambio

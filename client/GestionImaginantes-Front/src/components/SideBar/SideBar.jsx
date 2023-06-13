@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Typography, List, ListItem, ListItemButton, ListItemIcon, Box } from "@mui/material";
 import { AiFillHome, AiFillAppstore } from 'react-icons/ai';
 import { GrCycle } from 'react-icons/gr';
@@ -8,15 +8,23 @@ import './styles.css'
 
 const SideBar = () => {
   const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState('/');
+  const [selectedOption, setSelectedOption] = useState('');
 
   const logOut = () => {
     localStorage.clear();
     navigate('/auth');
   };
 
+  useEffect(() => {
+    const storedOption = localStorage.getItem('selectedOption');
+    if (storedOption) {
+      setSelectedOption(storedOption);
+    }
+  }, []);
+
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    localStorage.setItem('selectedOption', option);
     navigate(option);
   };
 

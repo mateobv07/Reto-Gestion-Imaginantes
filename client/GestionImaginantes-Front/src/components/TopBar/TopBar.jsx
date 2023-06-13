@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box, LinearProgress } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, LinearProgress, Tooltip } from "@mui/material";
 import './styles.css'
 
 
@@ -11,7 +11,9 @@ const TopBar = ({progress, name, level}) => {
             <Typography className='progreso-text'>
               PROGRESO
             </Typography>
+            <Tooltip title="El progeso es calculado en base a tus actividades actuales, si se te asignan actividades nuevas se actualizara" placement="top">
             <LinearProgress className='progress-bar' variant='determinate' value={progress}/>
+          </Tooltip>
           </div>
           <Typography className='fecha-text'>
             Viernes, 28 de abril 2023

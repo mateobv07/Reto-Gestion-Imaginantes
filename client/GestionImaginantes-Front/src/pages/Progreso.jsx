@@ -8,13 +8,16 @@ import LevelBadge from "../components/LevelBadge/LevelBadge";
 
 const Progreso = ({ completedTasks, totalTasks }) => {
   const [tasks, setTasks] = useState([]);
+
   useEffect(() => {
     getSolicitudes();
   }, []);
 
   const getSolicitudes = () => {
     axios
-      .get("http://localhost:3000/assignment/A01635675/?status=2")
+      .get("http://localhost:3000/assignment/A01635675/?status=2",{
+      headers: {'Authorization': localStorage.getItem('Auth')}
+      })
       .then(function (response) {
         setTasks(
           response.data.map((task) => {

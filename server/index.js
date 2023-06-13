@@ -29,7 +29,11 @@ export const db = knex({
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.use(cors());
+
+const corsOptions = {
+  exposedHeaders: 'SET-AUTH',
+};
+app.use(cors(corsOptions));
 
 //swagger
 //app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

@@ -1,8 +1,9 @@
 import { db } from '../index.js'
 
 export const getOtherRequests = async (req, res) => {
-    const { studentID } = req.params;
-    db.select('Request.id', 'Task.name', 'dueDate', 'team')
+    const { studentID } = req.user;
+
+    db.select('User.name as userName', 'Request.id', 'Task.name', 'dueDate', 'team')
     .from('Request')
     .where('Request.status', 0)
     .join('Assignment', 'Request.assignmentID', '=', 'Assignment.id')
@@ -16,11 +17,11 @@ export const getOtherRequests = async (req, res) => {
         }
         res.status(200).json({"message": "No requests"});
     })
-    .catch(err => res.status(400).json({"message": "Unable get requests"}));
+    .catch(err => res.status(400).json({"message": "Unable to get requests"}));
 }
 
 export const getMyRequests = async (req, res) => {
-    const { studentID } = req.params;
+    const { studentID } = req.user;
 
     db.select('Request.id', 'Task.name', 'dueDate', 'Request.status')
     .from('Assignment')
@@ -33,7 +34,26 @@ export const getMyRequests = async (req, res) => {
         }
         res.status(200).json({"message": "No requests"});
     })
-    .catch(err => res.status(400).json({"message": "Unable get requests"}));
+    .catch(err => res.status(400).json({"message": "Unable to get requests"}));
+}
+
+export const getOne = async (req, res) => {
+    const { id } = req.params;
+
+    db.select('Request.id', 'Task.name','Task.description', 'dueDate', 'Request.status', 'initialAvailableDate', 'endAvailableDate')
+    .from('Request')
+    .where('Request.id', id)
+    .join('Assignment', 'Request.assignmentID', '=', 'Assignment.id')
+    .join('Task', 'Task.id', '=', 'Assignment.taskID')
+    .first()
+    .then(request => {
+        if (request) {
+            return res.status(200).json(request);
+        }
+        res.status(400).json({"message": "Invalid id"});
+    })
+    .catch(err => res.status(400).json({"message": "Unable to get request"}));
+
 }
 
 export const createRequest = async (req, res) => {

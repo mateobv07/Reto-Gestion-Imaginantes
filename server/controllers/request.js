@@ -1,7 +1,7 @@
 import { db } from '../index.js'
 
 export const getOtherRequests = async (req, res) => {
-    const { studentID } = req.params;
+    const { studentID } = req.user;
     db.select('User.name as userName', 'Request.id', 'Task.name', 'dueDate', 'team')
     .from('Request')
     .where('Request.status', 0)
@@ -16,7 +16,7 @@ export const getOtherRequests = async (req, res) => {
         }
         res.status(200).json({"message": "No requests"});
     })
-    .catch(err => res.status(400).json({"message": "Unable to get requests"}));
+    .catch(err => res.status(400).json({"message": "Unable to get requests", err}));
 }
 
 export const getMyRequests = async (req, res) => {

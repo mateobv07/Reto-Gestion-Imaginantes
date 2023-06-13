@@ -46,7 +46,7 @@
     overflow: auto;
     height: fit-content;
     width: 38vh;
-    min-height: 25vh;
+    min-height: 15vh;
     margin-left: 1.5vh;
     margin-right: 1.5vh;
     padding-left: 1.5vh;
@@ -86,4 +86,13 @@
     margin-left: 4.5vh;
     display: flex;
     flex-flow: row nowrap;
+}
+
+.fecha-texto {
+  font-weight: 500 !important;
+  margin-top: 0.75vh;
+  margin-bottom: 0.75vh;
+  font-family: Futura !important;
+  font-size: 15.5px;
+  color: #a0a1a3;
 }

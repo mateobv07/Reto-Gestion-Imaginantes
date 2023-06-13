@@ -3,31 +3,23 @@ import {Chip, Dialog, IconButton, Button, Box, InputLabel, MenuItem, FormHelperT
 import { BsXLg } from "react-icons/bs";
 import "./styles.css";
 
-const ExchangeButton = ({request, userInfo}) => {
+const ExchangeButton = ({id, request, handleClickGetRequest, open, handleExit, fecha}) => {
 
-    const [open, setOpen] = React.useState(false);
     const [button,setButton] = React.useState(true);
-    const [tarea, setTarea] = React.useState('');
+    const [tarea, setTarea] = React.useState("");
+
 
     const handleChange = (event) => {
         setTarea(event.target.value);
-        setButton(false);
-    };
-
-    const handleClick = () => {
-        console.info("You clicked the Chip.");
-        setOpen(true);    
-    };
-
-    const handleExit = () => {
-        setOpen(false);
-    };
-
-    const handleAccept = () => {
-        setOpen(false);
-
+        console.log(event.target.value);
+        console.log(tarea);
+        if (event.target.value === ""){
+            setButton(true);
+        }
+        else {
+            setButton(false);
+        }
     }
-
 
     return (
         <div className="chip-container">
@@ -35,9 +27,10 @@ const ExchangeButton = ({request, userInfo}) => {
             label="Clickable"
             variant="outlined"
             className="chip-popup"
-            onClick={handleClick}
+            onClick={() => handleClickGetRequest(id)}
             />
             <Dialog open={open} onClose={handleExit}>
+                {request ? 
                 <Box className='popup-container-exchange-request'> 
                     <div className='popup-cancel-container-delete'>
                     <IconButton className='popup-cancel-icon-delete' aria-label="exit" onClick={handleExit}>
@@ -47,10 +40,11 @@ const ExchangeButton = ({request, userInfo}) => {
 
                     <div className='popup-text-container-exchange'>
                         <p className='popup-task-title-exchange'>{request.name}</p>
-                        <p className="alert-text"> Descripción de Tarea: </p>
+                        <p className="alert-text"> Descripción: </p>
                         <Box className='popup-description-container-exchange'>
-                            <p className="exchange-text"> Una descripcion del intercambio.</p>
+                            <p className="exchange-text"> {request.description} </p>
                         </Box>
+                        <p className="fecha-texto"> Dia de la actividad: {fecha} </p>
                     </div>
                     <div className='popup-button-container-exchange'>
                     <FormControl required sx={{ m: 1, minWidth: 120 }}>
@@ -58,14 +52,15 @@ const ExchangeButton = ({request, userInfo}) => {
                         <Select
                         labelId="tarea-label"
                         id="tarea-requerida"
-                        value={""}
+                        value={tarea}
                         label="Tarea *"
                         onChange={handleChange}
                         autoWidth
                         >
-                        <MenuItem value="">
+                        <MenuItem value = "">
                             <em>Ninguna</em>
                         </MenuItem>
+
                         <MenuItem value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>
                         <MenuItem value={30}>Thirty</MenuItem>
@@ -74,7 +69,12 @@ const ExchangeButton = ({request, userInfo}) => {
                     </FormControl>
                         <Button disabled={button} className='popup-button-exchange' onClick={handleExit} variant="contained"> Borrar </Button>
                     </div>
-                </Box>
+                </Box>: 
+                <Box className="popup-container-exchange-request">
+                    <div className='popup-text-container-exchange'>
+                        <p className='popup-task-title-exchange'>Cargando...</p>
+                    </div>
+                </Box>}
             </Dialog>
 
         </div>

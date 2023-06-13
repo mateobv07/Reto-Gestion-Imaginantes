@@ -13,16 +13,19 @@ const LoginCard = ({credentials, setCredentials, login, invalidCredetials}) => {
         <>
             <div className="login-fields-container">
                 <TextField
+                fullWidth
                 error={invalidCredetials && !credentials.password ? true : false}
                 sx={{mb:3}}
+                variant="standard"
                 label="Matricula"
                 value={credentials.studentID}
                 onChange={(e) => setCredentials({...credentials, studentID:e.target.value})}
                 />
                 <TextField
                 error={invalidCredetials && !credentials.password ? true : false}
-                sx={{mb:3}}
+                sx={{mb:3, minWidth:"350px"}}
                 label="Contraseña"
+                variant="standard"
                 onChange={(e) => setCredentials({...credentials, password:e.target.value})}
                 value={credentials.password}
                 type={showPassword ? 'text' : 'password'}
@@ -34,7 +37,7 @@ const LoginCard = ({credentials, setCredentials, login, invalidCredetials}) => {
                         onClick={() => setShowPassword((show) => !show)}
                         edge="end"
                         >
-                        {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+                        {!showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
                         </IconButton>
                     </InputAdornment>
                     )

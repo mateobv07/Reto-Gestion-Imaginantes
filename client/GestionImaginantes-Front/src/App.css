@@ -1,8 +1,23 @@
-.mainContainer {
+.main-container {
     margin-left: 230px;
     margin-right: 5vw;
     margin-top: 32px;
     margin-bottom: 32px;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 60vw;
+}
+
+.login-img {
+    position: fixed;
+    width: 60vw;
+    height: 100vh; /* 50% of the view-height */
+    top: 0%;
+    left: 0%;
 }
 
 .title-row {

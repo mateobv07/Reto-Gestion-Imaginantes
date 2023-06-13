@@ -36,7 +36,9 @@ const Tablero = () => {
   }, []);
 
   const getTasks = () => {
-      axios.get('http://localhost:3000/assignment/A01635547/')
+      axios.get('http://localhost:3000/assignment/A01635547/', {
+      headers: {'Authorization': localStorage.getItem('Auth')}
+      })
       .then(function (response) {
           console.log(response.data)
           setTasks(response.data)

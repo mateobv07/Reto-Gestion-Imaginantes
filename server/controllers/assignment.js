@@ -6,7 +6,7 @@ export const getAssignments = async (req, res) => {
     const status  = req.query.status? req.query.status : 0;
 
 
-    db.select('Assignment.id','Task.name', 'Assignment.dueDate', 'Assignment.status')
+    db.select('Assignment.id','Task.name', 'Assignment.dueDate', 'Assignment.status','Task.description')
     .from('Assignment')
         .where('studentID', studentID)
         .andWhere('status', status)

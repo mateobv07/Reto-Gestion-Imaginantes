@@ -48,7 +48,7 @@ const PendTask = ({ task }) => {
     setIsPopupOpen(false);       // El Pop-up se desactiva
     navigate("/solicitudes");
   };
-
+  console.log(task);
   // Sintaxis de condicional --- condicion ? valor_si_verdadero : valor_si_falso;
   return (
     <Box className="pending-task-container" display="flex" alignItems="center">

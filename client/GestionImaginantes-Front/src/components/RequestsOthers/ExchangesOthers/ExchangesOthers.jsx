@@ -1,17 +1,13 @@
 import React from "react";
 import {Stack } from "@mui/material";
-import Chip from "@mui/material/Chip";
 import "./styles.css";
 import ChipsEquipos from "./ChipsEquipos";
+import ExchangeButton from "../../ExchangeButton/ExchangeButton";
 
 const ExchangesOthers = ({request,userInfo}) => {
 
   const date1 = new Date(request.dueDate);
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
-
-  const handleClick = () => {
-    console.info("You clicked the Chip.");
-  };
 
   return (
     <div className="row-format">
@@ -22,18 +18,12 @@ const ExchangesOthers = ({request,userInfo}) => {
 
           </p>
         </Stack>
-        <Chip
-          label="Clickable"
-          variant="outlined"
-          className="chip-popup"
-          onClick={handleClick}
-        />
+        <ExchangeButton request={request} userInfo={userInfo}/>
       {(request && userInfo) ?
       <ChipsEquipos
         equipo2={request.team}
         equipo1={userInfo.team}/> : "Loading"}
       <p className="row-date"> Fecha de Actividad: {date1.toLocaleDateString('es-MX', options)}</p>
-
     </div>
   );
 };

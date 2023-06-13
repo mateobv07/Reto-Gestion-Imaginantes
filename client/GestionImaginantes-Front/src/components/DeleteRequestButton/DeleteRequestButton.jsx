@@ -18,10 +18,13 @@ const DeleteRequestButton = ({id, tipo}) => {
 
   const handleClickDeleteRequest = () => {
     setOpen(false);  
+    console.log("borrando intercambio");
+    
   };
 
   const handleClickDeleteAssignment = () => {
     setOpen(false);  
+    console.log("borrando solicitud de entrega");
   };
 
   return (

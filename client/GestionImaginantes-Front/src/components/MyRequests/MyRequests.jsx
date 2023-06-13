@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Request from "./Request/Request";
 import './styles.css'
 
-const MyRequests = ({requests}) => {
+const MyRequests = ({requests, getAssignmentInfo}) => {
   const navigate = useNavigate();
 
   return (
@@ -19,7 +19,7 @@ const MyRequests = ({requests}) => {
       <hr className="line"/>
       <div className="request-list-container">
         {requests.map((request) => (
-          <Request key={request.id} request={request}/>
+          <Request key={request.id} request={request} onClick={() => getAssignmentInfo(request.id)}/>
         ))}
       </div>
     </Box>

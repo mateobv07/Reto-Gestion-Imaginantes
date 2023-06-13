@@ -24,10 +24,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F2F1F1 !important;
+  background-color: #F2F1F1;
   height: 35px;
   width: 35px;
   border-radius: 50% !important;
+  cursor: pointer;
+}
+.popup-cancel-icon:hover{
+  background-color: #e5e3e3;
 }
 /*--------------Titulo, Fecha y Descripción--------------*/
 .popup-text-container{
@@ -61,6 +65,17 @@
   width: 360px;
   border-radius: 44px;
   background-color: #5EB2C2;
+  display: flex;
+  align-items: center;
+}
+
+.desc-container{
+  color: #ffffff;
+  padding-left: 14px;
+  padding-right: 14px;
+  height: 170px;
+  text-justify: auto;
+  overflow: auto;
 }
 /*-----------Botones de Realizado y Cambiar--------------*/
 .popup-button-container{
@@ -82,9 +97,13 @@
   align-items: center;
   font-family: Futura!important;
   font-size: 20px !important;
-  color: #ffffff;
   background-color: #A3AFBA;
+  color: #ffffff; 
   cursor: pointer;
+  border: none;
+}
+.popup-button-change:hover{
+  background-color: #8a97a7;
 }
 /*Boton de realizado*/
 .popup-button-done{
@@ -99,6 +118,10 @@
   color: #ffffff;
   background-color: #5EB2C2;
   cursor: pointer;
+  border: none;
+}
+.popup-button-done:hover{
+  background-color: #3790a3;
 }
 /*----------------------Comentario-----------------------*/
 .popup-comment-container{

@@ -66,7 +66,12 @@
     font-family: Futura!important;
     font-size: 20px !important;
     color: #ffffff;
-    background-color: #A3AFBA;
+    background-color: #5EB2C2;
+    border: none;
+    cursor: pointer;
+}
+.popup-button-confirm:hover{
+    background-color: #3790a3;
 }
 /*Boton de realizado*/
 .popup-button-cancel{
@@ -79,6 +84,12 @@
     font-family: Futura!important;
     font-size: 20px !important;
     color: #ffffff;
-    background-color: #5EB2C2;
+    background-color: #A3AFBA;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-button-cancel:hover{
+    background-color: #8a97a7;
 }
 

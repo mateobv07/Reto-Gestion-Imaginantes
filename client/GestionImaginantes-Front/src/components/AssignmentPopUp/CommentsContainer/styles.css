@@ -1,0 +1,26 @@
+.comments-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.comment-container {
+    text-align: start;
+    background-color: #EFF2F6;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.comment-text {
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-top: 4px;
+    padding-bottom: 9px;
+}
+
+.comment-date-text {
+    padding-top: 9px;
+    margin-bottom: 0px;
+    margin-left: 7px;
+    margin-right: 7px;
+}

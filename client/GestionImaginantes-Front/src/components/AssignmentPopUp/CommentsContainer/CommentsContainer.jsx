@@ -1,16 +1,20 @@
 import React from 'react';
-import { Box, DialogContent, Dialog, DialogContentText, DialogTitle } from "@mui/material";
-import { BsXLg } from "react-icons/bs";
+import './styles.css'
 
 const CommentsContainer = ({comments}) => {
-    console.log(comments)
+  const userName = JSON.parse(localStorage.getItem('User'));
   return (
-   <div>
+   <div className='comments-container'>
+        <h3>{comments.length ? 'Commentarios' : 'Sin comentarios'}</h3>
         {comments.map((comment) => (
-            <div >
-                {comment.createdByAdmin}
-                {comment.createdAt}
+            <div key={comment.id} className='comment-container'>
+                <p className='comment-date-text'>
+                    {new Date(comment.createdAt).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </p>
+                <p className='comment-text'>
+                <b>{comment.createdByAdmin ? 'Admin' : userName.name}: </b>
                 {comment.content}
+                </p>
             </div>
         ))}
    </div>

@@ -16,7 +16,7 @@
     font-size: 22px !important;
     color: #4B5055;
     margin-bottom: 1vh;
-    margin-top: 0vh;
+    margin-top: 1vh;
   }
 
   /*-----------Botones de Realizado y Cambiar--------------*/
@@ -44,9 +44,8 @@
 
 .popup-description-container-exchange{
     overflow: auto;
-    height: fit-content;
-    width: 38vh;
-    min-height: 15vh;
+    width: 42vh;
+    min-height: 25vh;
     margin-left: 1.5vh;
     margin-right: 1.5vh;
     padding-left: 1.5vh;
@@ -67,7 +66,7 @@
     border-radius: 10px;
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
-    width: 45vh;
+    width: 55vh;
     height: auto;
     position: fixed;
     top: 50%;
@@ -95,4 +94,24 @@
   font-family: Futura !important;
   font-size: 15.5px;
   color: #a0a1a3;
+}
+
+.popup-rango-exchange {
+  font-family: Futura !important;
+  font-size: 17px !important;
+  color: #4B5055;
+  margin-right: 3.5vh;
+  margin-left: 3.5vh;
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+
+.chip-popup {
+  position:absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto !important;
+  font-family: Futura !important;
+  background: #ffffff !important;
+  margin-right: 4.5vh !important;
+  margin-left: 4.5vh !important;
 }

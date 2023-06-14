@@ -58,7 +58,7 @@ const SideBar = () => {
             <ListItemIcon sx={{ mr: -3 }}>
               <GrCycle className="icon" size={22} color='#FFFFFF'/>
             </ListItemIcon>
-            <Typography className="texto-nav" color='#FFFFFF'>Solicitudes</Typography>
+            <Typography className="texto-nav" color='#FFFFFF'>Intercambios</Typography>
           </ListItemButton>
         </ListItem>
 

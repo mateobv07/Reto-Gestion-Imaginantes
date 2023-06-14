@@ -9,7 +9,7 @@ const ChipsEquipos = ({equipo1,equipo2}) => {
     const [propiedadesExterno, setPropiedadesExterno] = React.useState([]);
     
     const colorTeam = ["red", "blue", "green"];
-    const typeTeam = ["Primer Equipo", "Segundo Equipo", "Tercer Equipo"]
+    const typeTeam = ["Contenido", "Comunicación", "Estación de Juegos"]
 
     useEffect(() => {
         setPropiedadesInterno([typeTeam[equipo1],colorTeam[equipo1]]);
@@ -18,8 +18,8 @@ const ChipsEquipos = ({equipo1,equipo2}) => {
     
     return (
     <div className="chip-equipos-container">
-        <Chip className="chip-interno" label={propiedadesInterno[0]} variant="outlined" sx={{color:propiedadesInterno[1], borderColor:propiedadesInterno[1], paddingRight:"10px", paddingLeft:"10px", paddingBottom:"auto"}}/>
-        <Chip className="chip-externo" label={propiedadesExterno[0]} variant="outlined" sx={{color:propiedadesExterno[1], borderColor:propiedadesExterno[1], paddingRight:"10px", paddingLeft:"10px", paddingBottom:"auto"}}/>
+        <Chip className="chip-interno" label={propiedadesInterno[0]} variant="outlined" sx={{color:propiedadesInterno[1], borderColor:propiedadesInterno[1], paddingRight:"13px", paddingLeft:"0px", paddingBottom:"auto"}}/>
+        <Chip className="chip-externo" label={propiedadesExterno[0]} variant="outlined" sx={{color:propiedadesExterno[1], borderColor:propiedadesExterno[1], paddingRight:"0px", paddingLeft:"0px", paddingBottom:"auto"}}/>
     </div>
     );
   }

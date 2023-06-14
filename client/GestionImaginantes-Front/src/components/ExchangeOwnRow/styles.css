@@ -4,7 +4,7 @@
     margin-bottom: auto;
     margin-right: auto;
     font-family: Futura !important;
-    font-size: 12px;
+    font-size: 15.5px;
     color: #4b5055;
 }
   
@@ -14,7 +14,7 @@
     margin-bottom: auto;
     margin-right: auto;
     font-family: Futura !important;
-    font-size: 12px;
+    font-size: 15.5px;
     color: #a0a1a3;
 }
 
@@ -98,6 +98,14 @@
   font-size: 20px !important;
   color: #ffffff;
   background-color: #f83f1e !important;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.exchange-status-text {
+  font-weight: 500;
+  font-size: 16px;
+  color: #5EB2C2;
   margin-top: auto;
   margin-bottom: auto;
 }

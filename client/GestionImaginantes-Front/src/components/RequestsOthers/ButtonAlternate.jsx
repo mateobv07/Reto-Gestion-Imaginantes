@@ -11,10 +11,10 @@ const ButtonAlternate = ({alignment, handleChange}) => {
             exclusive
             onChange={handleChange}>
         <ToggleButton value={true}>
-                <p className='card-title-request'>INTERCAMBIOS</p>
+                <p className='card-title-request'>INTERCAMBIOS AJENOS</p>
         </ToggleButton>
         <ToggleButton value={false}>
-                <p className='card-title-request'>SOLICITUDES</p>
+                <p className='card-title-request'>INTERCAMBIOS PROPIOS</p>
         </ToggleButton>
         </ToggleButtonGroup>
       );

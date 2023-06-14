@@ -8,7 +8,7 @@ import axios from 'axios';
 
 import './styles.css';
 
-const RequestsOthers = ({intercambios, userInfo}) => {
+const RequestsOthers = ({intercambios, userInfo, updateIntercambios}) => {
   const [alignment, setAlignment] = useState(true);
 
   const [dialog, setDialog] = useState(false);
@@ -38,7 +38,6 @@ const RequestsOthers = ({intercambios, userInfo}) => {
 
   const handleClickDeleteRequest = (idRequest) => {
     setDialog(false);
-    console.log("borrando intercambio");
     axios.delete(('http://localhost:3000/request/' + idRequest), {
     headers: {'Authorization': localStorage.getItem('Auth')}})
     .then(res => {
@@ -62,7 +61,7 @@ const RequestsOthers = ({intercambios, userInfo}) => {
       <div className="table-requests-container">
         {alignment ? 
           intercambios.length > 0 ?  
-            intercambios.map((row) => (<ExchangeOthers key={row.id} request={row} userInfo={userInfo}/>)) :
+            intercambios.map((row) => (<ExchangeOthers key={row.id} request={row} userInfo={userInfo} updateIntercambios={updateIntercambios}/>)) :
              <p className="empty-request"> No se han encontrado intercambios</p> :
           <Box className="tables-in-tables">
             {myRequest.length > 0 ? 

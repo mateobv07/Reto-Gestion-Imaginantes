@@ -1,0 +1,90 @@
+.popup-change-container {
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    width: 430px;
+    height: 450px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup-text-change-container{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+    height: 22vh;
+    text-align: center;
+}
+/*------------------------Textos-----------------------*/
+.popup-confirm-task-title {
+    font-family: Futura !important;
+    font-size: 24px !important;
+    color: #4B5055;
+    margin-bottom: 0px;
+    margin-top: -20px;
+}
+/*¿Desea marcarla como realizada?*/
+.popup-confirm{
+    font-family: Futura !important;
+    font-size: 20px !important;
+    color: #4B5055;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+/*------------------- Capsulas de fecha -----------------*/
+.popup-rangeDate-container{
+    padding-top: 5px;
+    min-height: 10px;
+    height: 24vh;
+    align-items: center;
+}
+/*-----------Botones de Realizado y Cambiar--------------*/
+.popup-confirm-button-container{
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-left: 46px;
+    padding-right: 45px;
+  }
+/*Boton de cambiado*/
+.popup-button-confirm{
+    border-radius: 44px;
+    height: 58px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura!important;
+    font-size: 20px !important;
+    color: #ffffff;
+    background-color: #5EB2C2;
+    cursor: pointer;
+}
+.popup-button-confirm:hover{
+    background-color: #3790a3;
+}
+/*Boton de realizado*/
+.popup-button-cancel{
+    border-radius: 44px;
+    height: 58px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura!important;
+    font-size: 20px !important;
+    color: #ffffff;
+    background-color: #A3AFBA;
+    cursor: pointer;
+}
+
+.popup-button-cancel:hover{
+    background-color: #8a97a7;
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import { Box } from "@mui/material";
-import { BsXLg } from "react-icons/bs";
 import "./styles.css";
 
 const ConfirmPopUp = ({popCancel, popConfirm, task}) => {  
@@ -15,8 +14,8 @@ const ConfirmPopUp = ({popCancel, popConfirm, task}) => {
                 </div>
 
                 <div className='popup-confirm-button-container'>
-                    <button className='popup-button-confirm' onClick={popConfirm}>Confirmar</button>
                     <button className='popup-button-cancel' onClick={popCancel}>Cancelar</button>
+                    <button className='popup-button-confirm' onClick={popConfirm}>Confirmar</button>
                 </div>
             </Box>
         </div>

@@ -1,16 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, TextField, Button} from "@mui/material";
 import { BsXLg } from "react-icons/bs";
-import { styled } from "@mui/system";
 import "./styles.css";
 
 
-const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
-  
-  const StyledTextField = styled(TextField)({
-    width: "100%",
-    height: "100%",
-  });
+const PendPopUp = ({popCambio, popCancel, popDone, task, comment, setComment}) => {
   
   return (
     <div>
@@ -30,17 +24,20 @@ const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
         </div>
 
         <div className='popup-button-container'>
-          <button className='popup-button-done' onClick={popDone}>Realizado</button>
           <button className='popup-button-change' onClick={popCambio}>Cambio</button>
+          <button className='popup-button-done' onClick={popDone}>Realizado</button>
         </div>
 
         <div className='popup-comment-container'>
-          <StyledTextField
+          <TextField
+            fullWidth
             id="outlined-multiline-static"
             label="Comentario: "
             multiline
             rows={4}
-          />
+            onChange={(e) => setComment(e.target.value)}
+            value={comment}
+            />
         </div>
       </Box>
     </div>

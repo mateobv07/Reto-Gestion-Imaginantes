@@ -45,6 +45,8 @@
 }
 
 .popup-task-title {
+  width: 290px;
+  word-wrap: break-word;
   font-family: Futura !important;
   font-size: 22px !important;
   color: #4B5055;

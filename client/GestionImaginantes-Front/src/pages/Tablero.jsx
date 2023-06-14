@@ -15,12 +15,14 @@ const Tablero = () => {
   }, []);
 
   const getTasks = () => {
-      axios.get('http://localhost:3000/assignment/A01635547/', {
+      axios.get('http://localhost:3000/assignment/', {
       headers: {'Authorization': localStorage.getItem('Auth')}
       })
       .then(function (response) {
           console.log(response.data)
-          setTasks(response.data)
+          if (response.data.length){
+            setTasks(response.data)
+          }
       })
       .catch(function (error) {
           console.log(error);
@@ -30,7 +32,7 @@ const Tablero = () => {
     return (
         <Grid container spacing={3} sx={{ mt: 0 }}>
         <Grid item md={7} xs={12}>
-          <PendingTask tasks={tasks}/>
+          <PendingTask tasks={tasks} resetTask={getTasks} getTasks={getTasks}/>
         </Grid>
         <Grid item md={5} xs={12}>
           <Calendar/>

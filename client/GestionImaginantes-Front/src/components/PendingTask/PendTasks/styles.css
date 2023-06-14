@@ -6,9 +6,13 @@
 }
 
 .pending-task-title {
+    width: 265px;
     font-family: Futura !important;
     font-size: 20px !important;
     color: #4B5055;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .pending-task-date {

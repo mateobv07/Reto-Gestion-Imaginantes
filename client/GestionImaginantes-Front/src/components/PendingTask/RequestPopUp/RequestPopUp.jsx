@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Stack } from "@mui/material";
 import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import "./styles.css";
+import { useDateField } from "@mui/x-date-pickers/DateField/useDateField";
 
 const RequestPopUp = ({popCancel, popConfirm, task}) => {  
+    const [isDateStart, setIsDateStart] = useState("");
+    const [isDateEnd, setIsDateEnd] = useState("");
     
     return (
         <div>
@@ -21,10 +24,10 @@ const RequestPopUp = ({popCancel, popConfirm, task}) => {
                     <Stack direction={'column'} justifyContent={'center'} alignItems={'center'} spacing={1}>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DemoContainer components={['DatePicker']} >
-                                <DatePicker label='Fecha Inicial'/>
+                                <DatePicker label='Fecha Inicial' disablePast/>
                             </DemoContainer>
                             <DemoContainer components={['DatePicker']} >
-                                <DatePicker label='Fecha Final'/>
+                                <DatePicker label='Fecha Final' disablePast/>
                             </DemoContainer>
                         </LocalizationProvider>
                     </Stack>

@@ -15,16 +15,15 @@ const Solicitudes = ({user}) => {
         setOtherRequest(res.data);})
         .catch((err) => console.log(err))
     }
-
+    
     useEffect(() => {
         getInfoIntercambios();
       },[]);
-    
-    
+      
     return (
         <Grid container spacing={3} sx={{mt:0}}>
             <Grid item md={12} xs={12}>
-                <RequestsOthers userInfo = {user} intercambios={otherRequest}/>
+                <RequestsOthers updateIntercambios={getInfoIntercambios} userInfo={user} intercambios={otherRequest}/>
             </Grid>
         </Grid>
     );

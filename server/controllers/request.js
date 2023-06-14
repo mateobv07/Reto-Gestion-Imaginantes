@@ -73,13 +73,13 @@ export const createRequest = async (req, res) => {
 
 export const updateRequest = async (req, res) => {
     const { id } = req.params;
-    const { status, initalAvailableDate, endAvailableDate, assignmentResponseID } = req.body;
+    const { status, initialAvailableDate, endAvailableDate, assignmentResponseID } = req.body;
 
-    if(status == undefined || !initalAvailableDate || !endAvailableDate) return res.status(400).json({"message": "Invalid body"});
+    if(status == undefined || !initialAvailableDate || !endAvailableDate) return res.status(400).json({"message": "Invalid body"});
 
     db('Request')
         .where('id', id)
-        .update({ status, initalAvailableDate, endAvailableDate, assignmentResponseID })
+        .update({ status, initialAvailableDate, endAvailableDate, assignmentResponseID })
         .then(request => {
             if (request) {
                 return res.status(200).json({"message": "Updated successfully"});

@@ -3,7 +3,7 @@ import {Chip, Dialog, IconButton, Button, Box, InputLabel, MenuItem, FormHelperT
 import { BsXLg } from "react-icons/bs";
 import "./styles.css";
 
-const ExchangeButton = ({id, request, handleClickGetRequest, open, handleExit, fecha}) => {
+const ExchangeButton = ({activitiesExchange, id, request, handleClickGetRequest, open, handleExit, fecha}) => {
 
     const [button,setButton] = React.useState(true);
     const [tarea, setTarea] = React.useState("");
@@ -60,10 +60,9 @@ const ExchangeButton = ({id, request, handleClickGetRequest, open, handleExit, f
                         <MenuItem value = "">
                             <em>Ninguna</em>
                         </MenuItem>
-
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                        {
+                            activitiesExchange.map((menu_item) => <MenuItem key={menu_item.id} value={menu_item.id}>{menu_item.name}</MenuItem>)
+                        }
                         </Select>
                         <FormHelperText>Requerido</FormHelperText>
                     </FormControl>

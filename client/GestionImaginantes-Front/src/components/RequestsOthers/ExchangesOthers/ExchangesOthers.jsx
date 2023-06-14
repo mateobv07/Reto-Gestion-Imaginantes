@@ -19,22 +19,24 @@ const ExchangesOthers = ({request,userInfo}) => {
     setOpen(true);
     axios.get(('http://localhost:3000/request/' + request.id), {
       headers: {'Authorization': localStorage.getItem('Auth')}})
-    .then(res => {
-    setRequestInfo(res.data);})
-    
-    axios.get(('http://localhost:3000/request/' + request.id), {
+      .then(res => {
+      setRequestInfo(res.data);
+
+      axios.get(('http://localhost:3000/assignment/' + '?initialAvailableDate=' + res.data.initialAvailableDate + '&endAvailableDate=' + res.data.endAvailableDate), {
       headers: {'Authorization': localStorage.getItem('Auth')}})
-    .then(res => {
-    setRequestInfo(res.data);})
+      .then(response => {
+      setActivitiesExchange(response.data);})
+      })
+
   }
 
-  const handleExit = () => {
 
+  const handleExit = () => {
     setOpen(false);
   };
 
   const handleAccept = () => {
-      setOpen(false);
+    setOpen(false);
   };
 
   return (
@@ -45,7 +47,7 @@ const ExchangesOthers = ({request,userInfo}) => {
             De: {userInfo ? request.userName : "Loading"}
           </p>
         </Stack>
-        <ExchangeButton fecha={date1.toLocaleDateString('es-MX', options)}id={request.id}request={requestInfo} handleClickGetRequest={handleClickGetRequest} open={open} handleExit={handleExit}/>
+        <ExchangeButton activitiesExchange={activitiesExchange}fecha={date1.toLocaleDateString('es-MX', options)}id={request.id}request={requestInfo} handleClickGetRequest={handleClickGetRequest} open={open} handleExit={handleExit}/>
       {(request && userInfo) ?
       <ChipsEquipos
         equipo2={request.team}

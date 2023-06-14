@@ -17,7 +17,7 @@ export const getOtherRequests = async (req, res) => {
         }
         res.status(200).json({"message": "No requests"});
     })
-    .catch(err => res.status(400).json({"message": "Unable to get requests"}));
+    .catch(err => res.status(400).json({"message": "Unable to get requests", err}));
 }
 
 export const getMyRequests = async (req, res) => {

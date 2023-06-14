@@ -42,4 +42,24 @@
     color: #4B5055;
 }
 
+.tables-in-tables {
+    height: 69.5vh !important;
+    overflow-y: auto;
+}
+.table-titles {
+    margin-right: auto;
+    font-family: Futura !important;
+    font-size: 15.5px;
+    font-weight: 500;
+    color: #4B5055;
+    text-align: center;
+}
 
+.empty-request {
+    font-family: Futura !important;
+    color: #4B5055;
+    font-weight: bold !important;
+    font-size: 25.5px;
+    padding-top: 10vh;
+    text-align: center;
+}

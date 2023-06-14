@@ -9,28 +9,7 @@ import axios from 'axios';
 
 const Tablero = () => {
   const [tasks, setTasks] = useState(null);
-    // { id: 1, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar) Se debe de hacer brainstorming y crear una lista de 3 posibles dinamicas con una planeacion completa Se debe de hacer brainstorming y crear una lista de 3 posibles dinamicas con una planeacion completa Se debe de hacer brainstorming y crear una lista de 3 posibles dinamicas con una planeacion completaSe debe de hacer brainstorming y crear una lista de 3 posibles dinamicas con una planeacion completa", date: "20 de Mayo", completed: false },
-    // { id: 2, name: "Taller de Lectura", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 2, name: "Taller de Lectura", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "14 de Mayo", completed: false },
-    // { id: 3, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 4, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 5, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 6, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 7, name: "Taller de Lectura", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "14 de Mayo", completed: false },
-    // { id: 8, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 9, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 10, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 11, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 12, name: "Taller de Pinturas", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 13, name: "Taller de Pinturas", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 14, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 15, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 16, name: "Taller de Pinturas", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 17, name: "Taller de Pinturas", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 18, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 19, name: "Taller de Juegos", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-    // { id: 20, name: "Taller de Pinturas", description:"En este taller de juegos debes de presentarte en (Lugar) y ayudar al evento donde jugaremos con niños de la colonia (Lugar)", date: "20 de Mayo", completed: false },
-
+  
   useEffect(() => {
     getTasks()
   }, []);

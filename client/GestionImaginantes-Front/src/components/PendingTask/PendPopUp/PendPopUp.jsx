@@ -11,7 +11,7 @@ const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
     width: "100%",
     height: "100%",
   });
-  
+
   return (
     <div>
       <Box className='popup-container'> 
@@ -30,8 +30,8 @@ const PendPopUp = ({popCambio, popCancel, popDone, task}) => {
         </div>
 
         <div className='popup-button-container'>
-          <button className='popup-button-done' onClick={popDone}>Realizado</button>
           <button className='popup-button-change' onClick={popCambio}>Cambio</button>
+          <button className='popup-button-done' onClick={popDone}>Realizado</button>
         </div>
 
         <div className='popup-comment-container'>

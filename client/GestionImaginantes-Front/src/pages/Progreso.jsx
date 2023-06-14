@@ -15,7 +15,7 @@ const Progreso = ({ completedTasks, totalTasks }) => {
 
   const getSolicitudes = () => {
     axios
-      .get("http://localhost:3000/assignment/A01635675/?status=2",{
+      .get("http://localhost:3000/assignment/?status=2",{
       headers: {'Authorization': localStorage.getItem('Auth')}
       })
       .then(function (response) {

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import LoginCard from '../components/LoginCard/LoginCard'
+import '../App.css'
 
 const Login = ({setUser}) => {
     const navigate = useNavigate();
@@ -22,10 +23,13 @@ const Login = ({setUser}) => {
     }
 
     return (
-        <>
-            <h1>Pagina login</h1>
-            <LoginCard credentials={credentials} setCredentials={setCredentials} login={login} invalidCredetials={invalidCredetials}/>
-        </>
+        <div className="login-container">
+            <img src="./assets/login.PNG" alt="Imaginantes" className="login-img"/>
+            <div>
+                <h1>Pagina login</h1>
+                <LoginCard credentials={credentials} setCredentials={setCredentials} login={login} invalidCredetials={invalidCredetials}/>
+            </div>
+        </div>
 
     );
 }

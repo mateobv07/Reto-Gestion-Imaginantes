@@ -4,27 +4,29 @@ import axios from 'axios';
 import UpcomingTask from "../components/UpcomingTask/UpcomingTask";
 import Announcements from "../components/Announcements/Announcements";
 import MyRequests from "../components/MyRequests/MyRequests";
+import AssignmentPopUp from "../components/AssignmentPopUp/AssignmentPopUp";
 
 
-const Inicio = () => {
+const Inicio = ({user}) => {
     const [upcomingTask, setUpcomingTask] = useState(null)
     const [announcements, setAnnouncements] = useState([])
+    const [assignmentRequests, setAssignmentRequests] = useState([]);
+    const [curRequest, setCurRequest] = useState({name:'', description:'', dueDate:''});
+    const [showAssignmentPopUp, setShowAssignmentPopUp] = useState(false);
 
     useEffect(() => {
-        getRequests()
-        getAnnouncements()
+        getUpcomingAssignment();
+        getAssignmentRequests();
+        getAnnouncements();
       }, []);
 
 
-    const getRequests = () => {
-        axios.get('http://localhost:3000/assignment/A01635675/upcoming', {
+    const getUpcomingAssignment = () => {
+        axios.get('http://localhost:3000/assignment/upcoming', {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
             setUpcomingTask(response.data)
-        })
-        .catch(function (error) {
-            console.log(error);
         })
     }
 
@@ -35,24 +37,42 @@ const Inicio = () => {
         .then(function (response) {
             setAnnouncements(response.data)
         })
-        .catch(function (error) {
-            console.log(error);
+    }
+
+    const getAssignmentRequests = () => {
+        axios.get('http://localhost:3000/assignment?status=1', {
+        headers: {'Authorization': localStorage.getItem('Auth')}
+        })
+        .then(function (response) {
+            setAssignmentRequests(response.data)
         })
     }
 
-    const requests = [{id:1, title:"Taller Juegos", status:"En espera de confirmación"}, {id:2, title:"Taller Lectura", status:"En espera de confirmación"}, {id:3, title:"Taller Instrumentos", status:"En espera de confirmación"}, {id:4, title:"Taller Juegos", status:"En espera de confirmación"}, {id:5, title:"Taller Juegos", status:"En espera de confirmación"}, {id:6, title:"Taller Lectura", status:"En espera de confirmación"}]
+    const getAssignmentInfo = (id) => {
+        axios.get('http://localhost:3000/assignment/'+id, {
+        headers: {'Authorization': localStorage.getItem('Auth')}
+        })
+        .then(function (response) {
+            setCurRequest(response.data);
+            setShowAssignmentPopUp(true);
+        })
+    }
+
     return (
-        <Grid container spacing={3} sx={{mt:0}}>
-            <Grid item md={7} xs={12}>
-                <UpcomingTask task={upcomingTask}/>
+        <>
+            <Grid container spacing={3} sx={{mt:0}}>
+                <Grid item md={7} xs={12}>
+                    <UpcomingTask task={upcomingTask}/>
+                </Grid>
+                <Grid item md={5} xs={12}>
+                    <MyRequests requests={assignmentRequests} getAssignmentInfo={getAssignmentInfo}/>
+                </Grid>
+                <Grid item md={12} xs={12}>
+                    <Announcements announcements={announcements} />
+                </Grid>
             </Grid>
-            <Grid item md={5} xs={12}>
-                <MyRequests requests={requests}/>
-            </Grid>
-            <Grid item md={12} xs={12}>
-                <Announcements announcements={announcements} />
-            </Grid>
-        </Grid>
+            <AssignmentPopUp show={showAssignmentPopUp} setShow={setShowAssignmentPopUp} task={curRequest}/>
+        </>
     );
 }
 

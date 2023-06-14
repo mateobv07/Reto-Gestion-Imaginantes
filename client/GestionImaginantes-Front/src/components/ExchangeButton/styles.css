@@ -1,0 +1,98 @@
+
+
+.popup-text-container-exchange{
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+  }
+  
+.popup-task-title-exchange {
+    font-family: Futura !important;
+    font-size: 22px !important;
+    color: #4B5055;
+    margin-bottom: 1vh;
+    margin-top: 0vh;
+  }
+
+  /*-----------Botones de Realizado y Cambiar--------------*/
+.popup-button-container-exchange{
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3vh;
+  }
+  /*Boton de realizado*/
+  .popup-button-exchange{
+    border-radius: 44px !important;
+    height: 58px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Futura!important;
+    font-size: 20px !important;
+    color: #ffffff;
+    background-color: #5EB2C2 !important;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.popup-description-container-exchange{
+    overflow: auto;
+    height: fit-content;
+    width: 38vh;
+    min-height: 15vh;
+    margin-left: 1.5vh;
+    margin-right: 1.5vh;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+    border-radius: 44px;
+    background-color: #5EB2C2;
+}
+
+.exchange-text {
+    font-family: Futura !important;
+    font-size: 16px;
+    color: #ffffff;
+    justify-content: center;
+    align-self: center;
+}
+
+.popup-container-exchange-request {
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    width: 45vh;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    justify-content: center !important;
+}
+
+.chip-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 4.5vh;
+    margin-left: 4.5vh;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.fecha-texto {
+  font-weight: 500 !important;
+  margin-top: 0.75vh;
+  margin-bottom: 0.75vh;
+  font-family: Futura !important;
+  font-size: 15.5px;
+  color: #a0a1a3;
+}

@@ -10,3 +10,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.completed-tasks-text {
+    background: #4bb4c5;
+    box-shadow: 0 3px 5px 2px rgba(75, 180, 197, .3);
+    color: white;
+  }
+  

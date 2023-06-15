@@ -1,21 +1,15 @@
 import React from "react";
 import { useMemo } from "react";
 import { Box, CircularProgress, Typography } from "@mui/material";
-import { green, grey } from "@mui/material/colors";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import "./styles.css";
 
-const CompletionBar = ({ tasks, totalTasks }) => {
+const CompletionBar = ({ tasks }) => {
   const theme = useTheme();
   const completedTasks = useMemo(
     () => tasks.filter((task) => task.completed).length,
     [tasks]
-  );
-  const completedPercentage = useMemo(
-    () => (completedTasks / totalTasks) * 100,
-    [completedTasks, totalTasks]
   );
 
   const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 200 : 200;
@@ -23,10 +17,7 @@ const CompletionBar = ({ tasks, totalTasks }) => {
   const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 100 : 200;
 
   return (
-    <Box
-      className="completion-bar-card-container"
-      sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)" }}
-    >
+    <Box className="completion-bar-card-container">
       <Box
         position="relative"
         display="inline-flex"
@@ -38,15 +29,8 @@ const CompletionBar = ({ tasks, totalTasks }) => {
           variant="determinate"
           value={100}
           size={sizeLarge || sizeMedium || sizeSmall}
-          thickness={3.5}
-          style={{ color: grey[300] }}
-        />
-        <CircularProgress
-          variant="determinate"
-          value={completedPercentage}
-          size={sizeLarge || sizeMedium || sizeSmall}
-          thickness={3.5}
-          style={{ color: green["A400"], position: "absolute" }}
+          thickness={5}
+          style={{ color: "#36b4c5" }}
         />
         <Box
           top={0}
@@ -58,16 +42,29 @@ const CompletionBar = ({ tasks, totalTasks }) => {
           alignItems="center"
           justifyContent="center"
         >
-          <Typography variant="h4" component="div" color="text.primary">
-            {`${Math.round(completedPercentage)}%`}
+          <Typography
+            variant="h2"
+            component="div"
+            color="text.primary"
+            style={{ fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial' }}
+          >
+            {`${completedTasks}`}
           </Typography>
         </Box>
       </Box>
-      <Typography variant="h5" component="div" color="#text.primary">
-        COMPLETADO
-      </Typography>
-      <Typography variant="subtitle1" component="div" color="text.secondary">
-        Actividades: {completedTasks}/{totalTasks}
+      <Typography
+        variant="h4"
+        component="div"
+        style={{
+          color: "#FFFFFF",
+          fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
+          textShadow: "2px 2px 4px #000000",
+          borderRadius: "5px",
+          padding: "5px",
+        }}
+        className="completed-tasks-text"
+      >
+        TAREAS COMPLETADAS
       </Typography>
     </Box>
   );

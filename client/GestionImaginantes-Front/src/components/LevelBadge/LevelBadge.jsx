@@ -11,7 +11,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
   const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 150 : 150;
   const sizeMedium = useMediaQuery(theme.breakpoints.down("md")) ? 120 : 150;
   const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 100 : 150;
-  
+
   const icons = [
     <FaMedal size={sizeLarge || sizeMedium || sizeSmall} color="#CD7F32" />,
     <FaAward size={sizeLarge || sizeMedium || sizeSmall} color="#C0C0C0" />,
@@ -42,7 +42,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
       }}
     >
       <Typography
-        variant="h4"
+        variant="h6"
         component="div"
         color="text.primary"
         sx={{
@@ -50,6 +50,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
           top: "10px",
           right: "300px",
           alignSelf: "flex-start",
+          fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
         }}
       >
         {name}
@@ -61,13 +62,19 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
           color="text.secondary"
           sx={{
             mt: 5,
+            fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
           }}
         >
           ¡Felicidades, has llegado al nivel máximo!
         </Typography>
       )}
-      {icons[Math.min(Math.floor(level), 4)]}
-      <Typography variant="h5" component="div" color="text.secondary">
+      <Box sx={{ mt: 5 }}>{icons[Math.min(Math.floor(level), 4)]}</Box>
+      <Typography
+        variant="h5"
+        component="div"
+        color="text.secondary"
+        sx={{ fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial' }}
+      >
         {level < 4 ? `Nivel ${Math.floor(level) + 1}` : "Nivel 5"}
       </Typography>
       <Grid
@@ -82,6 +89,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
             component="div"
             color="text.secondary"
             align="center"
+            sx={{ fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial' }}
           >
             Nivel {Math.floor(level) + 1}
           </Typography>
@@ -90,7 +98,17 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
           <LinearProgress
             variant="determinate"
             value={progress}
-            sx={{ mb: 1, width: "100%", height: "20px" }}
+            sx={{
+              "& .MuiLinearProgress-barColorPrimary": {
+                bgcolor: "#36b4c5",
+              },
+              "& .MuiLinearProgress-colorPrimary": {
+                bgcolor: "#dfe8e9",
+              },
+              mb: 1,
+              width: "100%",
+              height: "20px",
+            }}
           />
         </Grid>
         <Grid item xs={2}>
@@ -99,6 +117,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
             component="div"
             color="text.secondary"
             align="center"
+            sx={{ fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial' }}
           >
             {level < 4 ? `Nivel ${Math.floor(level) + 2}` : "MAX"}
           </Typography>

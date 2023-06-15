@@ -4,9 +4,10 @@ import { BiChalkboard } from "react-icons/bi";
 import { styled } from "@mui/system";
 import Checkbox from "@mui/material/Checkbox";
 
+
 import "./styles.css";
 
-const TaskProgress = ({ tasks, onTaskCompletion }) => {
+const TaskProgress = ({ tasks, getTaskInfo }) => {
   const CustomCheckbox = styled(Checkbox)({
     color: "black",
     "&.Mui-checked": {
@@ -29,10 +30,11 @@ const TaskProgress = ({ tasks, onTaskCompletion }) => {
       {tasks.length > 0 ? (
         tasks.map((task, index) => (
           <div
-            key={index}
+            key={task._id ? task._id : index}
             className={`taskprogress-container ${
               index === tasks.length - 1 ? "last-task" : ""
             }`}
+            onClick={() => getTaskInfo(task._id)}
           >
             <CustomCheckbox
               checked={true}
@@ -55,7 +57,10 @@ const TaskProgress = ({ tasks, onTaskCompletion }) => {
           </div>
         ))
       ) : (
-        <p> Sin tareas activas </p>
+        <center >
+          <p className="upcoming-task-title"> No hay tareas completadas </p>
+        </center>
+        
       )}
     </Box>
   );

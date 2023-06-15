@@ -1,13 +1,15 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Grid } from "@mui/material";
-import { useCallback } from "react";
 import TaskProgress from "../components/TaskProgress/TaskProgress";
 import CompletionBar from "../components/CompletionBar/CompletionBar";
 import LevelBadge from "../components/LevelBadge/LevelBadge";
+import AssignmentPopUp from "../components/AssignmentPopUp/AssignmentPopUp";
 
 const Progreso = ({ completedTasks, totalTasks }) => {
   const [tasks, setTasks] = useState([]);
+  const [currentTask, setCurrentTask] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     getSolicitudes();
@@ -15,8 +17,8 @@ const Progreso = ({ completedTasks, totalTasks }) => {
 
   const getSolicitudes = () => {
     axios
-      .get("http://localhost:3000/assignment/?status=2",{
-      headers: {'Authorization': localStorage.getItem('Auth')}
+      .get("http://localhost:3000/assignment/?status=2", {
+        headers: { Authorization: localStorage.getItem("Auth") },
       })
       .then(function (response) {
         setTasks(
@@ -28,6 +30,7 @@ const Progreso = ({ completedTasks, totalTasks }) => {
               day: "numeric",
             });
             return {
+              _id: task.id,
               name: task.name,
               date: `${formattedDate}`,
               completed: true,
@@ -40,32 +43,44 @@ const Progreso = ({ completedTasks, totalTasks }) => {
       });
   };
 
-  const handleTaskCompletion = useCallback(
-    (index) => {
-      const newTasks = [...tasks];
-      newTasks[index].completed = !newTasks[index].completed;
-      setTasks(newTasks);
-    },
-    [tasks]
-  );
+  const handleTaskClick = (id) => {
+    getTaskInfo(id);
+  };
 
+  const getTaskInfo = (id) => {
+    axios
+      .get("http://localhost:3000/assignment/" + id, {
+        headers: { Authorization: localStorage.getItem("Auth") },
+      })
+      .then(function (response) {
+        setCurrentTask(response.data);
+        setShowModal(true);
+      });
+  };
 
   const level = Math.min(completedTasks / 4, 5);
 
   return (
     <Grid container spacing={4} sx={{ mt: 0 }}>
       <Grid item md={7} xs={12}>
-        <TaskProgress tasks={tasks} />
+        <TaskProgress tasks={tasks} getTaskInfo={handleTaskClick} />
       </Grid>
       <Grid item md={5} xs={12}>
         <CompletionBar tasks={tasks} totalTasks={totalTasks} />
         <LevelBadge
-          name="Rodrigo Chávez"
+          name="Mateo Bernasconi Vargas"
           level={level}
           tasksCompleted={completedTasks}
           totalTasks={totalTasks}
         />
       </Grid>
+      {currentTask && (
+        <AssignmentPopUp
+          show={showModal}
+          setShow={setShowModal}
+          task={currentTask}
+        />
+      )}
     </Grid>
   );
 };

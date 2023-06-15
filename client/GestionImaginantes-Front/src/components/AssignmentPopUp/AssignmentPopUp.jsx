@@ -2,12 +2,13 @@ import React from 'react';
 import { Box, Dialog } from "@mui/material";
 import CommentsContainer from './CommentsContainer/CommentsContainer'
 import { BsXLg } from "react-icons/bs";
-
-import { MdOutlinePendingActions } from 'react-icons/md';
+import { MdOutlinePendingActions, MdCheckCircle } from 'react-icons/md';
 import { TbCalendarDue } from 'react-icons/tb';
 import './styles.css'
 
 const AnnouncementPopUp = ({show, setShow, task}) => {
+
+  const isCompleted = task.status === 2;
 
   return (
     <Dialog
@@ -24,8 +25,9 @@ const AnnouncementPopUp = ({show, setShow, task}) => {
 
         <div className='popup-text-container'>
           <p className='popup-task-title title-margin' >{task.name}</p>
-          <p className='task-status-text center-icon-text'> <MdOutlinePendingActions size={18} color="#36b4c5"/>
-            En espera de confirmación de admin
+          <p className='task-status-text center-icon-text' style={isCompleted ? {color: "#32C064"} : {color: "#36b4c5"}}>
+            {isCompleted ? <MdCheckCircle size={18}/> : <MdOutlinePendingActions size={18}/>}
+            {isCompleted ? "Tarea completada" : "En espera de confirmación de admin"}
           </p>
           <p className='popup-task-date'>Fecha Límite: {new Date(task.dueDate).toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
           <Box className='asignment-popup-description-container'>

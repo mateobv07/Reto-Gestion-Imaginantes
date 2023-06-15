@@ -7,7 +7,7 @@
 
 .pending-task-title {
     width: 265px;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #4B5055;
     overflow: hidden;
@@ -16,7 +16,7 @@
 }
 
 .pending-task-date {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 16px !important;
     color: #A3AFBA;
 }

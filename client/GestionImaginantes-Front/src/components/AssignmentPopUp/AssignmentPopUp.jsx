@@ -16,7 +16,7 @@ const AnnouncementPopUp = ({show, setShow, task}) => {
         onClose={() => setShow(false)}
       >
 
-      <Box className='assignment-popup-container'> 
+      <Box className='assignment-popup-container'>
         <div className='popup-cancel-container pointer'>
           <Box className='popup-cancel-icon' onClick={() => setShow(false)}>
             <BsXLg size={18} color="#8C8B8B" />

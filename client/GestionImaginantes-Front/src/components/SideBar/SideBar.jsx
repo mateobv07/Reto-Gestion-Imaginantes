@@ -1,40 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Typography, List, ListItem, ListItemButton, ListItemIcon, Box } from "@mui/material";
 import { AiFillHome, AiFillAppstore } from 'react-icons/ai';
 import { GrCycle } from 'react-icons/gr';
 import { RiDashboard3Line } from 'react-icons/ri'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './styles.css'
 
 const SideBar = () => {
   const navigate = useNavigate();
-  const [selectedOption, setSelectedOption] = useState('');
+  const location = useLocation();
 
   const logOut = () => {
     localStorage.clear();
-    navigate('/auth');
-  };
-
-  useEffect(() => {
-    const storedOption = localStorage.getItem('selectedOption');
-    if (storedOption) {
-      setSelectedOption(storedOption);
-    }
-  }, []);
-
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    localStorage.setItem('selectedOption', option);
-    navigate(option);
+    navigate('/login');
   };
 
   return (
     <Box className="box" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
       <List sx={{ mt: 18 }}>
         <ListItem component="div" disablePadding>
-          <ListItemButton onClick={() => handleOptionClick('/')}
+          <ListItemButton onClick={() => navigate('/')}
             justifycontent="center"
-            sx={{padding: '25px', backgroundColor: selectedOption === '/' ? '#3691a4' : 'transparent'}}>
+            sx={{padding: '25px', backgroundColor: location.pathname === '/' ? '#3691a4' : 'transparent'}}>
             <ListItemIcon sx={{ mr: -3 }}>
               <AiFillHome size={22} color='#FFFFFF'/>
             </ListItemIcon>
@@ -43,8 +30,8 @@ const SideBar = () => {
         </ListItem>
 
         <ListItem component="div" disablePadding>
-          <ListItemButton onClick={() => handleOptionClick('/tablero')}
-            sx={{padding: '25px', backgroundColor: selectedOption === '/tablero' ? '#3691a4' : 'transparent'}}>
+          <ListItemButton onClick={() => navigate('/tablero')}
+            sx={{padding: '25px', backgroundColor: location.pathname === '/tablero' ? '#3691a4' : 'transparent'}}>
             <ListItemIcon sx={{ mr: -3 }}>
               <AiFillAppstore size={22} color='#FFFFFF'/>
             </ListItemIcon>
@@ -53,8 +40,8 @@ const SideBar = () => {
         </ListItem>
 
         <ListItem component="div" disablePadding>
-          <ListItemButton onClick={() => handleOptionClick('/solicitudes')}
-            sx={{padding: '25px', backgroundColor: selectedOption === '/solicitudes' ? '#3691a4' : 'transparent'}}>
+          <ListItemButton onClick={() => navigate('/solicitudes')}
+            sx={{padding: '25px', backgroundColor: location.pathname === '/solicitudes' ? '#3691a4' : 'transparent'}}>
             <ListItemIcon sx={{ mr: -3 }}>
               <GrCycle className="icon" size={22} color='#FFFFFF'/>
             </ListItemIcon>
@@ -63,8 +50,8 @@ const SideBar = () => {
         </ListItem>
 
         <ListItem component="div" disablePadding>
-          <ListItemButton onClick={() => handleOptionClick('/progreso')}
-            sx={{padding: '25px', backgroundColor: selectedOption === '/progreso' ? '#3691a4' : 'transparent'}}>
+          <ListItemButton onClick={() => navigate('/progreso')}
+            sx={{padding: '25px', backgroundColor: location.pathname === '/progreso' ? '#3691a4' : 'transparent'}}>
             <ListItemIcon sx={{ mr: -3 }}>
               <RiDashboard3Line size={22} color='#FFFFFF'/>
             </ListItemIcon>

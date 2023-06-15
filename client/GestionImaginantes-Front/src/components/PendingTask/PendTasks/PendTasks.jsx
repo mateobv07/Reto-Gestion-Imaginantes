@@ -9,8 +9,8 @@ const PendTask = ({ task, onClick, isChecked}) => {
   const navigate = useNavigate();                    // Para Navegar
 
   const CustomCheckbox = styled(Checkbox)({  // Style sirve para personalizar los componentes
-    color: "#8C8B8B",                        // Color de la cajita vacía 
-    "&.Mui-checked": { color: "#5EB2C2" }    // Color de la cajita llena
+    color: "#8C8B8B",                        // Color de la cajita vacía
+    "&.Mui-checked": { color: "#36b4c5" }    // Color de la cajita llena
   });
 
   const handleCheckboxClick = () => { // Función del CheckBox que activa el Pop-up

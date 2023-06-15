@@ -24,7 +24,7 @@ const ExchangeOwnRow = ({solicitud, handleExit, handleClickOpen, handleClickDele
         <p className="row-date-assignment"> Entrega: {date1.toLocaleDateString('es-MX', options)} </p>
       </TableCell>
       <TableCell align="right">
-        <p className="exchange-status-text center-icon-text"> <MdOutlinePendingActions size={18} color="#5EB2C2"/> Estado: {estatus} </p>
+        <p className="exchange-status-text center-icon-text"> <MdOutlinePendingActions size={18} color="#36b4c5"/> Estado: {estatus} </p>
       </TableCell>
       <TableCell align="right">
         <div>
@@ -32,7 +32,7 @@ const ExchangeOwnRow = ({solicitud, handleExit, handleClickOpen, handleClickDele
             <MdDelete/>
           </IconButton>
           <Dialog open={dialog} onClose={handleExit}>
-            <Box className='popup-container-delete-request'> 
+            <Box className='popup-container-delete-request'>
               <div className='popup-cancel-container-delete'>
                 <IconButton className='popup-cancel-icon-delete' aria-label="exit" onClick={handleExit}>
                   <BsXLg size={18} color="#8C8B8B"/>
@@ -54,5 +54,5 @@ const ExchangeOwnRow = ({solicitud, handleExit, handleClickOpen, handleClickDele
     </TableRow>
     );
   }
-  
+
   export default ExchangeOwnRow;

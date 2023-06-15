@@ -10,7 +10,7 @@
     margin-bottom: 0px;
     height: 1px;
     border: none;
-    background: #8e9091; 
+    background: #8e9091;
 }
 
 .table-requests-container {
@@ -36,7 +36,7 @@
 
 .card-title-request {
     margin-right: auto;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 15.5px;
     font-weight: 500;
     color: #4B5055;
@@ -48,7 +48,7 @@
 }
 .table-titles {
     margin-right: auto;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 15.5px;
     font-weight: 500;
     color: #4B5055;
@@ -56,7 +56,7 @@
 }
 
 .empty-request {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     color: #4B5055;
     font-weight: bold !important;
     font-size: 25.5px;

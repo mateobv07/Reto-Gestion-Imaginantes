@@ -21,7 +21,7 @@ function App() {
       {(user && !atLogin) &&
         <>
           <SideBar />
-          <TopBar progress={Math.round(user.completedTasks / user.totalTasks * 100)} name={user.name} level={'Nivel 50'}/>
+          <TopBar progress={Math.round(user.completedTasks / user.totalTasks * 100)} name={user.name} team={user.team}/>
         </>
       }
       <Routes>

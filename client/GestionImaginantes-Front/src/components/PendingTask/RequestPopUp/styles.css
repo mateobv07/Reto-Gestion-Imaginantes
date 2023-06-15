@@ -23,7 +23,7 @@
 }
 /*------------------------Textos-----------------------*/
 .popup-confirm-task-title {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 24px !important;
     color: #4B5055;
     margin-bottom: 0px;
@@ -31,7 +31,7 @@
 }
 /*¿Desea marcarla como realizada?*/
 .popup-confirm{
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #4B5055;
     margin-bottom: 0px;
@@ -61,14 +61,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Futura!important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #ffffff;
-    background-color: #5EB2C2;
+    background-color: #36b4c5;
     cursor: pointer;
 }
 .popup-button-confirm:hover{
-    background-color: #3790a3;
+    background-color: #4bb4c5;
 }
 /*Boton de realizado*/
 .popup-button-cancel{
@@ -78,7 +78,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Futura!important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #ffffff;
     background-color: #A3AFBA;

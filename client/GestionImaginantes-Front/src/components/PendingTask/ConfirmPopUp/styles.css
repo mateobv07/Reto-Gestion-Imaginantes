@@ -23,7 +23,7 @@
 }
 /*------------------------Textos-----------------------*/
 .popup-confirm-task-title {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 24px !important;
     color: #4B5055;
     margin-bottom: 0px;
@@ -31,7 +31,7 @@
 }
 /*¿Desea marcarla como realizada?*/
 .popup-confirm{
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #4B5055;
     margin-bottom: 0px;
@@ -42,7 +42,7 @@
     margin-left: 60px;
     margin-right: 60px;
     margin-top: 5px;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 14px !important;
     color: #A3AFBA;
 }
@@ -63,10 +63,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Futura!important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #ffffff;
-    background-color: #5EB2C2;
+    background-color: #36b4c5;
     border: none;
     cursor: pointer;
 }
@@ -81,7 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Futura!important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #ffffff;
     background-color: #A3AFBA;

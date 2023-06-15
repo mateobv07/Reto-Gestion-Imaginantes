@@ -1,9 +1,10 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Box, LinearProgress, Tooltip } from "@mui/material";
 import './styles.css'
+import 'dayjs/locale/es';
+import dayjs from 'dayjs';
 
-
-const TopBar = ({progress, name, level}) => {
+const TopBar = ({progress, name, team}) => {
   return (
       <AppBar position="static" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)", bgcolor: "#FFFFFF" }} className='rounding'>
         <Toolbar sx={{justifyContent:"space-between"}}>
@@ -16,11 +17,11 @@ const TopBar = ({progress, name, level}) => {
           </Tooltip>
           </div>
           <Typography className='fecha-text'>
-            Viernes, 28 de abril 2023
+            {dayjs().locale('es').format(`dddd, D MMMM [de] YYYY`)}
           </Typography>
           <Box className="profile-container">
           <Typography noWrap={true} className=''>{name}</Typography>
-          <Typography noWrap={true} className=''>{level}</Typography>
+          <Typography noWrap={true} className=''>{team === 0 ? 'Contenido' : team === 1 ? 'Comunicación' : 'Estación de Juegos'}</Typography>
         </Box>
         </Toolbar>
       </AppBar>

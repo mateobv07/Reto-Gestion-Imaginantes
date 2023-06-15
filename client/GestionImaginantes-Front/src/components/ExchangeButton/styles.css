@@ -10,9 +10,9 @@
     text-align: center;
     height: fit-content;
   }
-  
+
 .popup-task-title-exchange {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 22px !important;
     color: #4B5055;
     margin-bottom: 1vh;
@@ -34,10 +34,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Futura!important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 20px !important;
     color: #ffffff;
-    background-color: #5EB2C2 !important;
+    background-color: #36b4c5 !important;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -51,11 +51,11 @@
     padding-left: 1.5vh;
     padding-right: 1.5vh;
     border-radius: 44px;
-    background-color: #5EB2C2;
+    background-color: #36b4c5;
 }
 
 .exchange-text {
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 16px;
     color: #ffffff;
     justify-content: center;
@@ -91,13 +91,13 @@
   font-weight: 500 !important;
   margin-top: 0.75vh;
   margin-bottom: 0.75vh;
-  font-family: Futura !important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 15.5px;
   color: #a0a1a3;
 }
 
 .popup-rango-exchange {
-  font-family: Futura !important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 17px !important;
   color: #4B5055;
   margin-right: 3.5vh;
@@ -110,7 +110,7 @@
   position:absolute;
   top: 0; bottom: 0; left: 0; right: 0;
   margin: auto !important;
-  font-family: Futura !important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   background: #ffffff !important;
   margin-right: 4.5vh !important;
   margin-left: 4.5vh !important;

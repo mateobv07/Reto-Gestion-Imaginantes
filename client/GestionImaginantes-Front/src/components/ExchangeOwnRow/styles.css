@@ -3,23 +3,23 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 15.5px;
     color: #4b5055;
 }
-  
+
 .row-date-assignment {
     font-weight: 500 !important;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: auto;
-    font-family: Futura !important;
+    font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
     font-size: 15.5px;
     color: #a0a1a3;
 }
 
 .alert-text {
-  font-family: Futura !important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 16px;
   color: #4b5055;
   justify-content: center;
@@ -72,7 +72,7 @@
 }
 
 .popup-task-title-delete {
-  font-family: Futura !important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 22px !important;
   color: #4B5055;
   margin-bottom: .5vh;
@@ -94,7 +94,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: Futura!important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 20px !important;
   color: #ffffff;
   background-color: #f83f1e !important;
@@ -105,7 +105,7 @@
 .exchange-status-text {
   font-weight: 500;
   font-size: 16px;
-  color: #5EB2C2;
+  color: #36b4c5;
   margin-top: auto;
   margin-bottom: auto;
 }

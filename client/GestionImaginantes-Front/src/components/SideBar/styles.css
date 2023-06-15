@@ -1,16 +1,16 @@
 .box {
   position: absolute;
-  color: #30768a;
+  color: #36b4c5;
   min-height: 700px;
   height: 83.5vh;
   width: 172px;
-  background-color: #5EB2C2;
+  background-color: #36b4c5;
   left: 32px;
   border-radius: 5px;
 }
 
 .texto-nav {
-  font-family: Futura!important;
+  font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   font-size: 18px !important;
 }
 

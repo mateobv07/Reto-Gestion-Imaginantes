@@ -26,7 +26,7 @@ const Inicio = ({user}) => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            setUpcomingTask(response.data)
+            if(response.data.id) setUpcomingTask(response.data)
         })
     }
 
@@ -35,7 +35,7 @@ const Inicio = ({user}) => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            setAnnouncements(response.data)
+            if(response.data.length) setAnnouncements(response.data)
         })
     }
 
@@ -44,7 +44,7 @@ const Inicio = ({user}) => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            setAssignmentRequests(response.data)
+            if(response.data.length) setAssignmentRequests(response.data)
         })
     }
 

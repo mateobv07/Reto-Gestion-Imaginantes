@@ -30,7 +30,8 @@ const SideBar = () => {
 
   return (
     <Box className="box" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-      <List sx={{ mt: 18 }}>
+      <img className="imagen" src="../../assets/estacion-meiquer-logo-spaced.png" alt="Logo EstacionMeiquer" height="70px"/>
+      <List sx={{ mt: 10 }}>
         <ListItem component="div" disablePadding>
           <ListItemButton onClick={() => handleOptionClick('/')}
             justifycontent="center"

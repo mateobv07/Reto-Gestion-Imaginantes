@@ -1,6 +1,12 @@
 .calendar-card-container {
     border-radius: 5px;
     background-color: #ffffff !important;
-    margin-bottom: 10px;
-    height: 43.6vh;
+    height: 55%;
+}
+.css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-actionBar {
+    display: none;
+}
+
+.css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-toolbar {
+    display: none;
 }

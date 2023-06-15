@@ -16,9 +16,7 @@ const PendingTask = ({tasks, resetTask, getTasks}) => {
     const [isRequestOpen, setIsRequest] = useState(false);  
     const [comment, setComment] = useState('');
     
-    const handleDone = () => {
-        setIsPopupOpen(false); 
-        setIsConfirmOpen(true);
+    const creatFinal = () => {
         if (!comment) {
             console.log("El comentario está vacío. No se creará el comentario.");
             updateTask();
@@ -27,6 +25,11 @@ const PendingTask = ({tasks, resetTask, getTasks}) => {
         else{
             createComment();
         }
+    }
+
+    const handleDone = () => {
+        setIsPopupOpen(false); 
+        setIsConfirmOpen(true);
     }
 
     const handleCancel = () => {   // Función del Pop-up que si se cancela, no cambia el estado de la CheckBox
@@ -63,11 +66,14 @@ const PendingTask = ({tasks, resetTask, getTasks}) => {
             data: {
                 assignmentID: curTask.id,
                 content: comment, 
+                createdByAdmin: 0,
             }
+
         })
         .then(function (response) {
             console.log(response.data)
             updateTask();
+            setComment('');
         })
         .catch(function (error) {
             console.log(error);
@@ -115,7 +121,7 @@ const PendingTask = ({tasks, resetTask, getTasks}) => {
             </Dialog>
 
             <Dialog open={isConfirmOpen}> 
-                <ConfirmPopUp task={curTask} popConfirm={() => (setIsConfirmOpen(false), updateTask())} popCancel={handleCancel}/>
+                <ConfirmPopUp task={curTask} popConfirm={() => (setIsConfirmOpen(false), creatFinal())} popCancel={handleCancel}/>
             </Dialog>
 
             <Dialog open={isRequestOpen}> 

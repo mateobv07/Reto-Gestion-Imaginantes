@@ -3,13 +3,14 @@ import { Grid } from "@mui/material";
 import PendingTask from "../components/PendingTask/PendingTask";
 import Calendar from "../components/Calendar/Calendar";
 import Overview from "../components/Overview/Overview";
+import dayjs from 'dayjs';
 import axios from 'axios';
 
 
 
 const Tablero = () => {
   const [tasks, setTasks] = useState(null);
-  
+
   useEffect(() => {
     getTasks()
   }, []);
@@ -29,13 +30,15 @@ const Tablero = () => {
       })
   }
 
+  console.log(tasks)
+
     return (
         <Grid container spacing={3} sx={{ mt: 0 }}>
         <Grid item md={7} xs={12}>
           <PendingTask tasks={tasks} resetTask={getTasks} getTasks={getTasks}/>
         </Grid>
         <Grid item md={5} xs={12}>
-          <Calendar/>
+          <Calendar tasks={tasks}/>
           <Overview/>
         </Grid>
       </Grid>

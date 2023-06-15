@@ -57,13 +57,13 @@ export const getOne = async (req, res) => {
 }
 
 export const createRequest = async (req, res) => {
-    const { assignmentID, initalAvailableDate, endAvailableDate} = req.body;
+    const { assignmentID, initialAvailableDate, endAvailableDate} = req.body;
 
-    if(!assignmentID || !initalAvailableDate || !endAvailableDate) return res.status(400).json({"message": "Invalid body"});
+    if(!assignmentID || !initialAvailableDate || !endAvailableDate) return res.status(400).json({"message": "Invalid body"});
 
     db('Request')
         .insert(
-        {assignmentID, initalAvailableDate, endAvailableDate},
+        {assignmentID, initialAvailableDate, endAvailableDate},
         ).then(request => {
             res.status(201).json({"message":"created successfully", "id" : request[0]});
         }).catch(err => {

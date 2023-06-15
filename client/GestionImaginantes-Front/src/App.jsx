@@ -17,7 +17,7 @@ function App() {
   const atLogin = useLocation().pathname === '/login';
 
   return (
-    <div className={!atLogin && 'main-container'}>
+    <div className={!atLogin ? 'main-container' : ''}>
       {(user && !atLogin) &&
         <>
           <SideBar />

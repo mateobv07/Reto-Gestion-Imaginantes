@@ -24,9 +24,9 @@ const Login = ({setUser}) => {
 
     return (
         <div className="login-container">
-            <img src="./assets/login.PNG" alt="Imaginantes" className="login-img"/>
+            <img src="./assets/login.jpg" alt="Imaginantes" className="login-img"/>
             <div>
-                <h1>Pagina login</h1>
+                <h1>Iniciar sesión</h1>
                 <LoginCard credentials={credentials} setCredentials={setCredentials} login={login} invalidCredetials={invalidCredetials}/>
             </div>
         </div>

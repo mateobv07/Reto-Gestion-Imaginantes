@@ -2,16 +2,25 @@ import React, {useState} from "react";
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import {AiFillEye, AiFillEyeInvisible} from 'react-icons/ai';
+import { createTheme, ThemeProvider  } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Button from '@mui/material/Button';
 import './styles.css';
+
+const theme = createTheme({
+    palette: {
+      primary: {
+        main: '#36b4c5',
+      },
+    },
+  });
 
 const LoginCard = ({credentials, setCredentials, login, invalidCredetials}) => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <>
-            <div className="login-fields-container">
+        <ThemeProvider theme={theme}>
+            <div className="login-fields-container margin-top-login">
                 <TextField
                 fullWidth
                 error={invalidCredetials && !credentials.password ? true : false}
@@ -45,12 +54,12 @@ const LoginCard = ({credentials, setCredentials, login, invalidCredetials}) => {
                 />
             <Button disabled={credentials.studentID && credentials.password ? false : true}
                     variant="contained"
-                    sx={{mx:12}}
+                    sx={{mx:12, mt:3, color:'#FFFFFF', borderRadius:'25px'}}
                     onClick={login}>
-                        Login
+                        Iniciar sesión
             </Button>
         </div>
-        </>
+        </ThemeProvider>
 
     );
 }

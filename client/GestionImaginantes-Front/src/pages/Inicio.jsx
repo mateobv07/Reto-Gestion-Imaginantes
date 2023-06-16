@@ -26,7 +26,7 @@ const Inicio = ({user}) => {
         headers: {'Authorization': localStorage.getItem('Auth')}
         })
         .then(function (response) {
-            if(response.data.id) setUpcomingTask(response.data)
+            if(response.data.name) setUpcomingTask(response.data)
         })
     }
 

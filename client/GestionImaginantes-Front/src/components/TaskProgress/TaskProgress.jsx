@@ -31,7 +31,7 @@ const TaskProgress = ({ tasks, getTaskInfo }) => {
         tasks.map((task, index) => (
           <div
             key={task._id ? task._id : index}
-            className={`taskprogress-container ${
+            className={`pointer taskprogress-container ${
               index === tasks.length - 1 ? "last-task" : ""
             }`}
             onClick={() => getTaskInfo(task._id)}
@@ -60,7 +60,7 @@ const TaskProgress = ({ tasks, getTaskInfo }) => {
         <center >
           <p className="upcoming-task-title"> No hay tareas completadas </p>
         </center>
-        
+
       )}
     </Box>
   );

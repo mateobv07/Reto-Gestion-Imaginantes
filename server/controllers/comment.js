@@ -1,4 +1,4 @@
-import { db } from '../index.js'
+import { db } from '../app.js'
 
 export const getAllAssignmentComments = async (req, res) => {
     const { assignmentID } = req.params;

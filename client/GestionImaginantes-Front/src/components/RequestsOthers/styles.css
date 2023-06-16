@@ -19,6 +19,10 @@
     overflow-y: auto;
 }
 
+.info-icon-requests {
+    margin-top: -4px;
+    margin-left: 5px;
+}
 
 .title-row-requests {
     margin-left: 15px !important;
@@ -41,6 +45,8 @@
     font-size: 15.5px;
     font-weight: 500;
     color: #4B5055;
+    display: flex;
+    align-items: center;
 }
 
 .tables-in-tables {

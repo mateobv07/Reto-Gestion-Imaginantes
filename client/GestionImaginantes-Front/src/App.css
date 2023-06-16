@@ -21,6 +21,14 @@
     left: 0%;
 }
 
+.login-logo-img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+
+}
+
 .title-row {
     margin-left: 18px;
     margin-right: 18px;

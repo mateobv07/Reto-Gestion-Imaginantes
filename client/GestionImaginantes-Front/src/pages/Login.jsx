@@ -24,6 +24,7 @@ const Login = ({setUser}) => {
 
     return (
         <div className="login-container">
+            <img src="./assets/logo-meiquer-black.svg" alt="Logo" className="login-logo-img"/>
             <img src="./assets/login.jpg" alt="Imaginantes" className="login-img"/>
             <div>
                 <h1>Iniciar sesión</h1>

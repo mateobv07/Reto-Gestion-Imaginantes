@@ -17,12 +17,13 @@ export const getAllAssignmentComments = async (req, res) => {
 
 export const createComment= async (req, res) => {
     const { assignmentID, content } = req.body;
+    const createdByAdmin = req.body.createdByAdmin !== undefined? req.body.createdByAdmin : 1;
 
     if(!assignmentID || !content) return res.status(400).json("invalid body");
 
     db('Comment')
         .insert(
-        {assignmentID, content},
+        {assignmentID, content, createdByAdmin},
         ).then(comment => {
             res.status(201).json(comment);
         }).catch(err => {

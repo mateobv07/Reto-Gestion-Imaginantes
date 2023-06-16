@@ -8,9 +8,9 @@ import "./styles.css";
 
 const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
   const theme = useTheme();
-  const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 150 : 150;
-  const sizeMedium = useMediaQuery(theme.breakpoints.down("md")) ? 120 : 150;
-  const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 100 : 150;
+  const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 120 : 150;
+  const sizeMedium = useMediaQuery(theme.breakpoints.down("md")) ? 100 : 150;
+  const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 80 : 150;
 
   const icons = [
     <FaMedal size={sizeLarge || sizeMedium || sizeSmall} color="#CD7F32" />,
@@ -51,6 +51,7 @@ const LevelBadge = ({ name, level, tasksCompleted, totalTasks }) => {
           right: "300px",
           alignSelf: "flex-start",
           fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
+          paddingLeft: "20px"
         }}
       >
         {name}

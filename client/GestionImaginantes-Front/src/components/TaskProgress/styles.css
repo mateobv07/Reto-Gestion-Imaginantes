@@ -1,11 +1,9 @@
 .taskprogress-card-container {
     border-radius: 5px;
     background-color: #FFFFFF !important;
-    min-height: 290px !important;
-    height: 78.5vh;
+    min-height: 594px !important;
+    height: 42.5vh;
     width: 100%;
-    margin-top: -8px;
-    overflow: auto; 
 }
 
 .taskprogress-container {
@@ -14,27 +12,28 @@
     justify-content: space-between;
     align-items: baseline;
     background-color: #ffffff;
-    min-height: 50px;
+    height: 60px;
     padding: 10px 20px; 
     margin-bottom: 1px;
     text-align: center;
-    border-top: 1px solid #696969;
+    border-top: 1px solid #4B5055;
 }
 
 .taskprogress-title {
     text-overflow: ellipsis !important;
-    font-weight: 500;
-    font-size: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200px;
+    font-size: 20px;
     color: #4B5055;
-    margin-bottom: 0px;
-    margin-left: 10px;
+    padding-bottom: 10px;
+    margin-right: auto;
 }
 
 .taskprogress-date-text {
     margin-top: 2px;
-    font-weight: 500;
     font-size: 16px;
-    color: #909090;
+    color: #A3AFBA;
 }
 
 .completed-task {

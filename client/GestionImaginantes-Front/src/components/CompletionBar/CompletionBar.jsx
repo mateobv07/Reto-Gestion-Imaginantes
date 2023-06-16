@@ -12,6 +12,8 @@ const CompletionBar = ({ tasks }) => {
     [tasks]
   );
 
+  console.log(tasks);
+
   const sizeLarge = useMediaQuery(theme.breakpoints.up("lg")) ? 200 : 200;
   const sizeMedium = useMediaQuery(theme.breakpoints.down("md")) ? 150 : 200;
   const sizeSmall = useMediaQuery(theme.breakpoints.down("sm")) ? 100 : 200;
@@ -58,7 +60,6 @@ const CompletionBar = ({ tasks }) => {
         style={{
           color: "#FFFFFF",
           fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
-          textShadow: "2px 2px 4px #000000",
           borderRadius: "5px",
           padding: "5px",
         }}

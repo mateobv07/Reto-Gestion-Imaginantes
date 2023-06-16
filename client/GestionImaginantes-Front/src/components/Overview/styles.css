@@ -4,3 +4,43 @@
     margin-top: 24px;
     height: 41%;
 }
+
+.overview-content{
+    height: 74%;
+    display: flex;
+
+}
+
+.overview-complete-task{
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    font-weight: 500;
+}
+
+.overview-pending-task{
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+}
+
+.number-pending{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #36b4c5;
+}
+
+.number-complete{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: #36b4c5;
+}

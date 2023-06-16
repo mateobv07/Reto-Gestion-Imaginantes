@@ -3,16 +3,16 @@ import { Grid } from "@mui/material";
 import PendingTask from "../components/PendingTask/PendingTask";
 import Calendar from "../components/Calendar/Calendar";
 import Overview from "../components/Overview/Overview";
-import dayjs from 'dayjs';
 import axios from 'axios';
 
 
-
-const Tablero = () => {
+const Tablero = ({completedTasks}) => {
   const [tasks, setTasks] = useState(null);
+  const [compTasks, setCompTasks] = useState(null);
 
   useEffect(() => {
     getTasks()
+    getCompTasks()
   }, []);
 
   const getTasks = () => {
@@ -30,7 +30,20 @@ const Tablero = () => {
       })
   }
 
-  console.log(tasks)
+  const getCompTasks = () => {
+    axios.get("http://localhost:3000/assignment/?status=2", {
+    headers: { Authorization: localStorage.getItem("Auth")}
+    })
+    .then(function (response) {
+        console.log(response.data)
+        if (response.data.length){
+          setCompTasks(response.data)
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+  };
 
     return (
         <Grid container spacing={3} sx={{ mt: 0 }}>
@@ -39,7 +52,7 @@ const Tablero = () => {
         </Grid>
         <Grid item md={5} xs={12}>
           <Calendar tasks={tasks}/>
-          <Overview/>
+          <Overview tasks={tasks} compTasks={compTasks}/>
         </Grid>
       </Grid>
     );

@@ -29,7 +29,7 @@ function App() {
           <Route path="/" exact element={user ? <Inicio user={user}/> : <Navigate to="/login"/>} />
           <Route path="/progreso" exact element={user ? <Progreso completedTasks={user.completedTasks} totalTasks={user.totalTasks}/> : <Navigate to="/login"/>} />
           <Route path="/Solicitudes" exact element={user ? <Solicitudes user={user}/> : <Navigate to="/login"/>} />
-          <Route path="/tablero" exact element={user ? <Tablero /> : <Navigate to="/login"/>} />
+          <Route path="/tablero" exact element={user ? <Tablero completedTasks={user.completedTasks} totalTasks={user.totalTasks}/> : <Navigate to="/login"/>} />
       </Routes>
     </div>
   )

@@ -6,7 +6,7 @@ import Overview from "../components/Overview/Overview";
 import axios from 'axios';
 
 
-const Tablero = ({completedTasks}) => {
+const Tablero = () => {
   const [tasks, setTasks] = useState(null);
   const [compTasks, setCompTasks] = useState(null);
 

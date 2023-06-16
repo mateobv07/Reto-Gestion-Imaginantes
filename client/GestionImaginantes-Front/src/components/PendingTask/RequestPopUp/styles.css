@@ -3,7 +3,8 @@
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
     width: 430px;
-    height: 450px;
+    min-height: 450px;
+    height: 50%px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -18,7 +19,7 @@
     justify-content: center;
     align-items: center;
     min-height: 110px;
-    height: 22vh;
+    height: 24vh;
     text-align: center;
 }
 /*------------------------Textos-----------------------*/
@@ -41,14 +42,14 @@
 .popup-rangeDate-container{
     padding-top: 5px;
     min-height: 10px;
-    height: 24vh;
+    height: 20vh;
     align-items: center;
 }
 /*-----------Botones de Realizado y Cambiar--------------*/
 .popup-confirm-button-container{
-    height: 60px;
+    height: 90px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     padding-left: 46px;
     padding-right: 45px;

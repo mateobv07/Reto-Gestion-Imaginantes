@@ -9,9 +9,8 @@ import "./styles.css";
 
 const TaskProgress = ({ tasks, getTaskInfo }) => {
   const CustomCheckbox = styled(Checkbox)({
-    color: "black",
-    "&.Mui-checked": {
-      color: "#36b4c5",
+    color: "#8C8B8B",
+    "&.Mui-checked": {color: "#36b4c5",
     },
   });
 

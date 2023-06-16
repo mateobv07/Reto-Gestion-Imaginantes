@@ -23,6 +23,9 @@ const CompletionBar = ({ tasks }) => {
       <Box
         position="relative"
         display="inline-flex"
+        alignItems="center"
+        justifyContent="center"
+        paddingTop={2}
         height={200}
         width={200}
         marginBottom={4}
@@ -30,7 +33,7 @@ const CompletionBar = ({ tasks }) => {
         <CircularProgress
           variant="determinate"
           value={100}
-          size={sizeLarge || sizeMedium || sizeSmall}
+          size={sizeSmall}
           thickness={5}
           style={{ color: "#36b4c5" }}
         />
@@ -45,7 +48,9 @@ const CompletionBar = ({ tasks }) => {
           justifyContent="center"
         >
           <Typography
-            variant="h2"
+            variant="h4"
+            size="20"
+            paddingTop={2}
             component="div"
             color="text.primary"
             style={{ fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial' }}
@@ -55,13 +60,13 @@ const CompletionBar = ({ tasks }) => {
         </Box>
       </Box>
       <Typography
-        variant="h4"
         component="div"
         style={{
           color: "#FFFFFF",
           fontFamily: '"Helvetica Neue", Helvetica, sans-serif, Arial',
           borderRadius: "5px",
           padding: "5px",
+          marginBottom: "20px"
         }}
         className="completed-tasks-text"
       >

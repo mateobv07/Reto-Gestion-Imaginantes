@@ -2,7 +2,8 @@
 .requests-exchange-container {
     border-radius: 5px;
     background-color: #FFFFFF !important;
-    height: 72.5vh !important;
+    min-height: 594px !important;
+    height: 42.5vh !important;
 }
 
 .gray-divider{

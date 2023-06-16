@@ -61,7 +61,7 @@ const Progreso = ({ completedTasks, totalTasks }) => {
   const level = Math.min(completedTasks / 4, 5);
 
   return (
-    <Grid container spacing={4} sx={{ mt: 0 }}>
+    <Grid container spacing={3} sx={{ mt: 0 }}>
       <Grid item md={7} xs={12}>
         <TaskProgress tasks={tasks} getTaskInfo={handleTaskClick} />
       </Grid>

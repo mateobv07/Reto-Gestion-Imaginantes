@@ -6,10 +6,9 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import dayjs from 'dayjs';
 import axios from 'axios';
-
 import "./styles.css";
 
-const RequestPopUp = ({popCancel, popConfirm, task}) => {  
+const RequestPopUp = ({popCancel, popConfirm, task}) => { 
     const [isDateStart, setIsDateStart] = useState("");
     const [isDateEnd, setIsDateEnd] = useState("");
 

@@ -1,4 +1,4 @@
-import { db } from '../index.js';
+import { db } from '../app.js';
 import jwt from 'jsonwebtoken';
 import requestIp from 'request-ip';
 
@@ -21,7 +21,7 @@ export const login = async (req, res) => {
 
             return res.status(200).json({user:user,accessToken:accessToken});
         }
-        return res.status(401).json({'message':'Invalid student id'});
+        return res.status(401).json({'message':'Invalid credentials'});
     })
     .catch(err => res.status(400).json({'message':'Unable to get user'}));
 

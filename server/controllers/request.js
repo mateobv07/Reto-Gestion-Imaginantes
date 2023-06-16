@@ -1,4 +1,4 @@
-import { db } from '../index.js'
+import { db } from '../app.js'
 
 export const getOtherRequests = async (req, res) => {
     const { studentID } = req.user;

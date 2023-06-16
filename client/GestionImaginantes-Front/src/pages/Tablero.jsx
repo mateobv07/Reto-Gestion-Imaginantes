@@ -6,12 +6,13 @@ import Overview from "../components/Overview/Overview";
 import axios from 'axios';
 
 
-
-const Tablero = () => {
+const Tablero = ({completedTasks}) => {
   const [tasks, setTasks] = useState(null);
-  
+  const [compTasks, setCompTasks] = useState(null);
+
   useEffect(() => {
     getTasks()
+    getCompTasks()
   }, []);
 
   const getTasks = () => {
@@ -29,14 +30,29 @@ const Tablero = () => {
       })
   }
 
+  const getCompTasks = () => {
+    axios.get("http://localhost:3000/assignment/?status=2", {
+    headers: { Authorization: localStorage.getItem("Auth")}
+    })
+    .then(function (response) {
+        console.log(response.data)
+        if (response.data.length){
+          setCompTasks(response.data)
+        }
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+  };
+
     return (
         <Grid container spacing={3} sx={{ mt: 0 }}>
         <Grid item md={7} xs={12}>
           <PendingTask tasks={tasks} resetTask={getTasks} getTasks={getTasks}/>
         </Grid>
         <Grid item md={5} xs={12}>
-          <Calendar/>
-          <Overview/>
+          <Calendar tasks={tasks}/>
+          <Overview tasks={tasks} compTasks={compTasks}/>
         </Grid>
       </Grid>
     );

@@ -69,7 +69,7 @@ const RequestPopUp = ({popCancel, popConfirm, task}) => {
                 </div>
                 <div className='popup-confirm-button-container'>
                     <button className='popup-button-cancel' onClick={popCancel}>Cancelar</button>
-                    <button className='popup-button-confirm' onClick={() => createRequest()}>Confirmar</button>
+                    <button className='popup-button-confirm' onClick={() => createRequest()} disabled={isDateStart === "" && isDateEnd === "" ? true : false}>Confirmar</button>
                 </div>
             </Box>
         </div>

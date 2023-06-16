@@ -80,7 +80,7 @@ const ExchangeButton = ({tarea, setTarea, handleAccept, activitiesExchange, id, 
                             <FormHelperText>No tienes ninguna tarea intercambiable.</FormHelperText>
                         </FormControl>
                     }
-                        <Button disabled={button} className='popup-button-exchange' onClick={() => handleAccept(request, tarea)} variant="contained"> Borrar </Button>
+                        <Button disabled={button} className='popup-button-exchange' onClick={() => handleAccept(request, tarea)} variant="contained"> Aceptar Intercambio </Button>
                     </div>
                 </Box>: 
                 <Box className="popup-container-exchange-request">

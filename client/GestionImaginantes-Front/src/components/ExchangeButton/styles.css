@@ -30,12 +30,12 @@
   .popup-button-exchange{
     border-radius: 44px !important;
     height: 58px;
-    width: 150px;
+    width: 210px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Helvetica Neue", Helvetica, sans-serif, Arial !important;
-    font-size: 20px !important;
+    font-size: 14px !important;
     color: #ffffff;
     background-color: #36b4c5 !important;
     margin-top: auto;

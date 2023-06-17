@@ -1,5 +1,5 @@
 import React from "react";
-import {Stack } from "@mui/material";
+import {Stack, } from "@mui/material";
 import "./styles.css";
 import ChipsEquipos from "./ChipsEquipos";
 import ExchangeButton from "../../ExchangeButton/ExchangeButton";
@@ -55,11 +55,11 @@ const ExchangesOthers = ({request,userInfo, updateIntercambios}) => {
 
   return (
     <div className="row-format">
-        <Stack spacing={0} sx={{marginRight:"4.5vh"}}>
-          <p className="row-things">{request ? request.name : <p>Loading</p>}</p>
-          <p className="row-name">
-            De: {userInfo ? request.userName : "Loading"}
-          </p>
+      <Stack spacing={0} sx={{marginRight:"4.5vh"}}>
+        <p className="row-things">{request ? request.name : <p>Loading</p>}</p>
+        <p className="row-name">
+          De: {userInfo ? request.userName : "Loading"}
+        </p>
         </Stack>
         <ExchangeButton tarea={tarea} setTarea={setTarea} handleAccept={handleAccept} activitiesExchange={activitiesExchange}fecha={date1.toLocaleDateString('es-MX', options)}id={request.id}request={requestInfo} handleClickGetRequest={handleClickGetRequest} open={open} handleExit={handleExit}/>
       {(request && userInfo) ?

@@ -81,8 +81,6 @@
 .chip-container {
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 4.5vh;
-    margin-left: 4.5vh;
     display: flex;
     flex-flow: row nowrap;
 }

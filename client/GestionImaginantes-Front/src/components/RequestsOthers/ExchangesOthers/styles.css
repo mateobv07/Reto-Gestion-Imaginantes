@@ -35,8 +35,7 @@
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #bcbec2;
-  display: flex;
-  flex-flow: row nowrap;
+  display: flex !important;
   justify-content: space-evenly !important;
 }
 
@@ -71,3 +70,10 @@
   flex-flow: row nowrap;
 }
 
+.first-div{
+  width: 35vh;
+}
+
+.second-div{
+  width: 25vh;
+}

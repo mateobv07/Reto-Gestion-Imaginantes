@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import LoginCard from '../components/LoginCard/LoginCard'
 import '../App.css'
+import logoImg from'../assets/logo-meiquer-black.svg';
+import coverImg from'../assets/login.jpg';
 
 const Login = ({setUser}) => {
     const navigate = useNavigate();
@@ -24,8 +26,8 @@ const Login = ({setUser}) => {
 
     return (
         <div className="login-container">
-            <img src="./assets/logo-meiquer-black.svg" alt="Logo" className="login-logo-img"/>
-            <img src="./assets/login.jpg" alt="Imaginantes" className="login-img"/>
+            <img src={logoImg} alt="Logo" className="login-logo-img"/>
+            <img src={coverImg} alt="Imaginantes" className="login-img"/>
             <div>
                 <h1>Iniciar sesión</h1>
                 <LoginCard credentials={credentials} setCredentials={setCredentials} login={login} invalidCredetials={invalidCredetials}/>

@@ -5,6 +5,7 @@ import { GrCycle } from 'react-icons/gr';
 import { RiDashboard3Line } from 'react-icons/ri'
 import { useNavigate, useLocation } from 'react-router-dom';
 import './styles.css'
+import logoImg2 from'../../assets/estacion-meiquer-logo-spaced.png';
 
 const SideBar = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const SideBar = () => {
 
   return (
     <Box className="box" sx={{ boxShadow: "0px 0px 5px rgba(0, 0, 0, 0.2)"}}>
-      <img className="imagen" src="../../assets/estacion-meiquer-logo-spaced.png" alt="Logo EstacionMeiquer" height="70px"/>
+      <img className="imagen" src={logoImg2} height="70px"/>
       <List sx={{ mt: 10 }}>
         <ListItem component="div" disablePadding>
           <ListItemButton onClick={() => navigate('/')}

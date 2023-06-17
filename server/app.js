@@ -36,6 +36,7 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+
 //routes
 app.use('/assignment', assignmentRoutes);
 app.use('/comment', commentRoutes);
@@ -43,5 +44,15 @@ app.use('/request', requestRoutes);
 app.use('/user', userRoutes);
 app.use('/announcement', announcementRoutes);
 
+//deployment
+app.use(express.static(path.resolve(__dirname, '../client/GestionImaginantes-Front/dist')));
+
+app.get('/', function(req,res){
+  res.sendFile(path.join(__dirname, '..', 'build'));
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/GestionImaginantes-Front/dist', 'index.html'));
+});
 
 export default app;

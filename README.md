@@ -1,7 +1,7 @@
 ﻿# Reto-Gestion-Imaginantes
 
 start local host server for back end:
-  - cd server
+  - create .env file using same variables as .env.example
   - npm install
   - npm start
 

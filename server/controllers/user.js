@@ -23,7 +23,7 @@ export const login = async (req, res) => {
         }
         return res.status(401).json({'message':'Invalid credentials'});
     })
-    .catch(err => res.status(400).json({'message':'Unable to get user'}));
+    .catch(err => res.status(400).json({'message':'Unable to get user', err}));
 
     res.status(200);
 }

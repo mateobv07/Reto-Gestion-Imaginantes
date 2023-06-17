@@ -2,7 +2,9 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from 'cors';
 import knex from 'knex';
-
+import * as path from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 //dotenv
 import * as dotenv from 'dotenv'
 dotenv.config()
@@ -43,6 +45,8 @@ app.use('/comment', commentRoutes);
 app.use('/request', requestRoutes);
 app.use('/user', userRoutes);
 app.use('/announcement', announcementRoutes);
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 //deployment
 app.use(express.static(path.resolve(__dirname, '../client/GestionImaginantes-Front/dist')));

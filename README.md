@@ -11,5 +11,5 @@ start local host server for front end:
   - npm run dev
 # How it looked
 
-![demo1](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/archi.png?raw=true)
-![demo1](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/archi.png?raw=true)
+![demo1](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/demo1.jpg?raw=true)
+![demo2](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/demo2.jpg?raw=true)

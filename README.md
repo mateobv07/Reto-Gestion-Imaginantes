@@ -9,3 +9,7 @@ start local host server for front end:
   - cd client/GestionImaginantes-Front
   - npm install
   - npm run dev
+# How it looked
+
+![demo1](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/archi.png?raw=true)
+![demo1](https://github.com/mateobv07/Reto-Gestion-Imaginantes/blob/main/archi.png?raw=true)
